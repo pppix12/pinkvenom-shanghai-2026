@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>상하이 미식 원정대 · 최종 정리본</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F3EC;
+  --paper-raised:#FFFFFF;
+  --ink:#21242B;
+  --ink-soft:#63676F;
+  --jade:#2E6B5E;
+  --jade-deep:#1F4C42;
+  --jade-soft:#E3EEEA;
+  --vermillion:#BE4A2E;
+  --vermillion-soft:#F6E4DD;
+  --brass:#A9803F;
+  --brass-soft:#F3EBDD;
+  --line:#E1DBCC;
+  --shadow:rgba(33,36,43,.08);
+  --l2:#7FB321; --l10:#B79BCB; --l14:#827A04;
+  --on-line:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1B1D22; --paper-raised:#24272E; --ink:#ECE9E0; --ink-soft:#AEA99C;
+    --jade:#71B6A1; --jade-deep:#173A33; --jade-soft:#233631;
+    --vermillion:#E58362; --vermillion-soft:#3A2620;
+    --brass:#D3B36C; --brass-soft:#36301F;
+    --line:#383B42; --shadow:rgba(0,0,0,.4);
+    --l2:#93C83C; --l10:#C7AEDA; --l14:#B2A73A; --on-line:#16181C;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1B1D22; --paper-raised:#24272E; --ink:#ECE9E0; --ink-soft:#AEA99C;
+  --jade:#71B6A1; --jade-deep:#173A33; --jade-soft:#233631;
+  --vermillion:#E58362; --vermillion-soft:#3A2620;
+  --brass:#D3B36C; --brass-soft:#36301F;
+  --line:#383B42; --shadow:rgba(0,0,0,.4);
+  --l2:#93C83C; --l10:#C7AEDA; --l14:#B2A73A; --on-line:#16181C;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:linear-gradient(to bottom,var(--jade) 0%,var(--jade) 50%,var(--paper) 50%,var(--paper) 100%);}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);}
+*,*::before,*::after{box-sizing:border-box;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+  font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+[lang="zh-CN"]{font-family:'Noto Sans SC','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;}
+h1,h2,h3,.display{font-family:'Noto Serif KR',serif;text-wrap:balance;letter-spacing:-.01em;}
+::selection{background:var(--jade-soft);}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 80px;}
+
+/* HERO */
+.hero{background:linear-gradient(180deg,var(--jade) 0%,var(--jade-deep) 100%);color:#F5F3EC;padding:38px 18px 26px;}
+.hero-inner{max-width:760px;margin:0 auto;}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;opacity:.78;font-weight:600;margin-bottom:10px;}
+.hero h1{font-size:clamp(28px,7vw,38px);font-weight:900;margin:0 0 6px;color:#fff;}
+.hero .sub{font-size:14.5px;opacity:.88;margin-bottom:22px;}
+.pass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;}
+.pass .k{font-size:11px;letter-spacing:.08em;opacity:.65;margin-bottom:3px;}
+.pass .v{font-size:14.5px;font-weight:600;}
+.pass .v small{display:block;font-weight:400;opacity:.78;font-size:12.5px;margin-top:2px;}
+.pass .full{grid-column:1/-1;height:1px;background:rgba(255,255,255,.16);margin:2px 0;}
+.pass .span{grid-column:1/-1;}
+.pass .trio{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.pass .trio .v{font-size:14px;}
+.pass .trio .v small{font-size:11.5px;}
+.pass .srch{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);margin-top:8px;}
+.pass .srch .srch-k{color:#F5F3EC;opacity:.7;}
+.pass .srch .srch-v{color:#fff;}
+.pass .srch .cp{background:#F5F3EC;color:var(--jade-deep);}
+
+/* TABS */
+.tabbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;scrollbar-width:none;}
+.tabbar::-webkit-scrollbar{display:none;}
+.tabbar-inner{max-width:760px;margin:0 auto;padding:0 18px;display:flex;gap:4px;}
+.tab{appearance:none;border:none;background:transparent;font-family:inherit;font-size:14px;font-weight:600;color:var(--ink-soft);padding:13px 12px 11px;cursor:pointer;border-bottom:2.5px solid transparent;flex:0 0 auto;}
+.tab.active{color:var(--ink);border-bottom-color:var(--jade);}
+.tab:focus-visible{outline:2px solid var(--jade);outline-offset:2px;}
+.panel{display:none;padding-top:26px;}
+.panel.active{display:block;}
+
+/* ROUTE */
+.route-card{background:var(--paper-raised);border:1px solid var(--line);border-radius:14px;padding:13px 15px;box-shadow:0 1px 2px var(--shadow);margin-bottom:22px;}
+.route-label{font-size:12px;font-weight:700;color:var(--brass);margin-bottom:8px;}
+.route-chips{display:flex;flex-wrap:wrap;align-items:center;gap:5px;font-size:12.5px;}
+.route-chips .chip{font-weight:600;color:var(--ink);background:var(--jade-soft);padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.route-chips .arw{color:var(--ink-soft);}
+.gmap-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px;}
+.gmap-btn{display:inline-flex;align-items:center;gap:6px;background:var(--jade);color:#fff;font-weight:700;font-size:13px;padding:8px 13px;border-radius:9px;text-decoration:none;}
+.gmap-btn:hover{opacity:.9;}
+.gmap-btn:focus-visible{outline:2px solid var(--jade);outline-offset:2px;}
+:root[data-theme="dark"] .gmap-btn{color:#16181C;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .gmap-btn{color:#16181C;}}
+.gmap-note{font-size:12px;color:var(--ink-soft);margin-top:8px;}
+
+/* DAY HEADER */
+.day-head{display:flex;align-items:baseline;gap:10px;margin-bottom:4px;}
+.day-num{font-family:'Noto Serif KR',serif;font-weight:900;font-size:15px;color:#fff;background:var(--jade);border-radius:7px;padding:3px 9px;}
+:root[data-theme="dark"] .day-num{color:#16181C;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .day-num{color:#16181C;}}
+.day-head h2{font-size:21px;margin:0;font-weight:700;}
+.day-date{font-size:13px;color:var(--ink-soft);margin:0 0 18px;padding-left:2px;}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:26px;}
+.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1.5px;background:var(--line);}
+.stop{position:relative;padding-bottom:14px;}
+.stop::before{content:"";position:absolute;left:-26px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--jade);border:2px solid var(--paper);box-shadow:0 0 0 1.5px var(--jade);}
+.stop.plain::before{background:var(--paper);}
+.time{font-size:12.5px;font-weight:700;color:var(--jade);letter-spacing:.02em;margin-bottom:3px;font-variant-numeric:tabular-nums;}
+.card{background:var(--paper-raised);border:1px solid var(--line);border-radius:13px;padding:13px 14px;box-shadow:0 1px 2px var(--shadow);}
+.stop.plain .card{background:transparent;box-shadow:none;}
+.card h3{font-size:15.5px;font-weight:700;margin:0 0 2px;}
+.card .cn{font-size:13px;color:var(--ink-soft);margin-bottom:5px;}
+.card .addr{font-size:12.5px;color:var(--ink-soft);margin-bottom:8px;}
+.card p{margin:4px 0 0;font-size:13px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.tag{font-size:11.5px;font-weight:600;padding:3px 8px;border-radius:20px;background:var(--jade-soft);color:var(--jade);white-space:nowrap;}
+.tag.cost{background:var(--line);color:var(--ink-soft);}
+.tag.book{background:var(--vermillion-soft);color:var(--vermillion);}
+.tag.warn{background:var(--brass-soft);color:var(--brass);}
+.tag.resv{background:var(--jade);color:#fff;}
+:root[data-theme="dark"] .tag.resv{color:#16181C;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.resv{color:#16181C;}}
+.card .must{margin-top:10px;padding:9px 12px;border-radius:10px;background:var(--brass-soft);color:var(--ink);font-size:13.5px;font-weight:700}
+  .note{font-size:12.5px;color:var(--ink-soft);margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);}
+.sub-items{margin-top:10px;display:grid;gap:8px;}
+.sub-item{border-left:2px solid var(--jade-soft);padding-left:10px;}
+.sub-item b{font-size:13.5px;}
+.sub-item .tag{margin-left:4px;}
+
+/* AMAP SEARCH */
+.srch{display:flex;align-items:center;gap:8px;margin-top:8px;padding:7px 8px 7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--paper);}
+.srch-k{font-size:11px;font-weight:700;color:var(--ink-soft);flex:0 0 auto;}
+.srch-v{font-size:13.5px;font-weight:500;color:var(--ink);flex:1 1 auto;min-width:0;overflow-wrap:anywhere;-webkit-user-select:all;user-select:all;}
+.cp{appearance:none;border:none;flex:0 0 auto;font-family:inherit;font-size:12px;font-weight:700;padding:5px 10px;border-radius:7px;background:var(--jade);color:#fff;cursor:pointer;}
+:root[data-theme="dark"] .cp{color:#16181C;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cp{color:#16181C;}}
+.cp.done{background:var(--ink-soft);}
+.cp:focus-visible{outline:2px solid var(--jade);outline-offset:2px;}
+
+/* LEGS */
+.leg{position:relative;margin:0 0 14px;padding:2px 0;}
+.leg-walk{font-size:12.5px;color:var(--ink-soft);display:flex;gap:6px;align-items:baseline;}
+.leg-walk .mode{font-weight:700;color:var(--ink);}
+.ride{border:1.5px dashed var(--line);border-radius:12px;padding:11px 13px;background:transparent;}
+.ride-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px;}
+.ride-when{font-size:12px;font-weight:700;color:var(--ink-soft);font-variant-numeric:tabular-nums;}
+.line{display:inline-block;white-space:nowrap;font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px;color:var(--on-line);}
+.line.l2{background:var(--l2);} .line.l10{background:var(--l10);} .line.l14{background:var(--l14);} .line.l8{background:#009EDB;}
+.line.l10{color:#2A1F33;}
+.ride-meta{font-size:12.5px;font-weight:700;color:var(--ink);}
+.ride-st{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline;font-size:13px;}
+.ride-st .lbl{font-size:11.5px;font-weight:700;color:var(--ink-soft);}
+.ride-st .zh{font-weight:700;}
+.ride-st .ko{color:var(--ink-soft);font-size:12.5px;margin-left:4px;}
+.ride-dir,.ride-walk{font-size:12.5px;color:var(--ink-soft);margin-top:7px;}
+.ride-dir b{color:var(--vermillion);font-weight:700;}
+.ride-alt{font-size:12.5px;color:var(--ink-soft);margin-top:7px;padding-top:7px;border-top:1px dashed var(--line);}
+
+.day-sum{margin-top:12px;font-size:12.5px;color:var(--ink-soft);background:var(--jade-soft);border-radius:10px;padding:10px 12px;}
+.day-sum b{color:var(--jade);}
+
+/* TRANSIT TABLE */
+.sec-title{font-family:'Noto Serif KR',serif;font-size:19px;font-weight:700;margin:0 0 6px;}
+.sec-lead{font-size:13px;color:var(--ink-soft);margin:0 0 16px;}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper-raised);margin-bottom:22px;}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:12.5px;}
+td:first-child{white-space:nowrap;}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{font-size:11.5px;color:var(--ink-soft);font-weight:700;background:var(--paper);}
+tr:last-child td{border-bottom:none;}
+td .zh{font-weight:700;}
+.tips{margin:0 0 22px;padding:0;list-style:none;}
+.tips li{position:relative;padding:9px 0 9px 16px;border-bottom:1px solid var(--line);font-size:13.5px;}
+.tips li::before{content:"";position:absolute;left:2px;top:17px;width:6px;height:6px;border-radius:50%;background:var(--jade);}
+.tips li:last-child{border-bottom:none;}
+
+/* CHECKLIST */
+.grp-title{font-size:13px;font-weight:700;color:var(--brass);margin:22px 0 8px;}
+.grp-title:first-child{margin-top:0;}
+.check{display:flex;align-items:flex-start;gap:11px;padding:11px 4px;border-bottom:1px solid var(--line);cursor:pointer;}
+.check:last-of-type{border-bottom:none;}
+.check input{margin-top:3px;width:17px;height:17px;accent-color:var(--jade);flex:0 0 auto;cursor:pointer;}
+.check .t{font-size:14.5px;font-weight:600;}
+.check .d{font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
+.check.checked .t{text-decoration:line-through;color:var(--ink-soft);}
+.pack-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media (max-width:480px){.pack-grid{grid-template-columns:1fr;}.pass{grid-template-columns:1fr;}.pass .trio{gap:10px;}}
+.pack-cat{background:var(--paper-raised);border:1px solid var(--line);border-radius:13px;padding:13px 14px;}
+.pack-cat h4{margin:0 0 8px;font-size:14px;font-weight:700;color:var(--brass);}
+.pack-cat ul{margin:0;padding-left:18px;font-size:13.5px;}
+.pack-cat li{margin-bottom:5px;}
+.footnote{margin-top:30px;padding:16px;border:1px dashed var(--line);border-radius:13px;font-size:12.5px;color:var(--ink-soft);line-height:1.7;}
+.footnote b{color:var(--ink);}
+.footnote a{color:var(--jade);}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;}}
+
+/* OVERVIEW + REGIONS */
+.ov-intro{color:var(--ink-soft);font-size:13.5px;margin:4px 0 16px;}
+.ov-day{background:var(--paper-raised);border:1px solid var(--line);border-radius:14px;padding:16px 18px 14px;margin:0 0 16px;box-shadow:0 1px 0 var(--shadow);}
+.ov-day h3{margin:0;font-size:18px;}
+.ov-date{color:var(--ink-soft);font-size:12.5px;margin:2px 0 10px;}
+.ov-day .route-chips{margin-bottom:12px;}
+.ov-tl{list-style:none;margin:0;padding:0 0 0 12px;border-left:2px solid var(--jade-soft);}
+.ov-tl li{display:grid;grid-template-columns:46px 1fr;gap:8px;padding:3px 0;font-size:13.5px;}
+.ov-tl .t{font-variant-numeric:tabular-nums;color:var(--jade);font-weight:700;}
+.ov-tl .mv{color:var(--ink-soft);}
+.ov-foot{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:12.5px;}
+.ov-foot b{display:block;font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:2px;}
+.ov-warn{margin-top:10px;background:var(--vermillion-soft);color:var(--ink);border-radius:10px;padding:8px 10px;font-size:12.5px;}
+.ov-check{background:var(--jade-soft);border-radius:14px;padding:14px 18px;margin:0 0 16px;}
+.ov-check h3{margin:0 0 8px;font-size:16px;}
+.ov-check ul{margin:0;padding-left:18px;font-size:13.5px;}
+.ov-check li{margin:4px 0;}
+.rg{background:var(--paper-raised);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 14px;}
+.rg h3{margin:0 0 2px;font-size:17px;}
+.rg .rg-sub{color:var(--ink-soft);font-size:12.5px;margin-bottom:8px;}
+.rg dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:6px 10px;font-size:13.5px;}
+.rg dt{color:var(--jade);font-weight:700;}
+.rg dd{margin:0;}
+.rg dd span.d{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:0 5px;margin-left:4px;background:var(--brass-soft);color:var(--brass);}
+@media (max-width:420px){.ov-foot{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">라따뚜이 · 짐짐 · 도리 · 3박4일</div>
+    <h1 class="display">상하이 미식 원정대</h1>
+    <div class="sub">2026.10.30(금) – 11.02(월) · 상하이(上海) · 최종 정리본</div>
+    <div class="pass">
+      <div><div class="k">가는 편</div><div class="v">OZ3615 김포 → 홍차오<small>10/30(금) 16:00 → 17:15</small></div></div>
+      <div><div class="k">오는 편</div><div class="v">OZ3625 홍차오 → 김포<small>11/2(월) 18:15 → 21:20</small></div></div>
+      <div class="full"></div>
+      <div class="span">
+        <div class="k">숙소</div>
+        <div class="v">SSAW Boutique Hotel Shanghai Bund<small><span lang="zh-CN">黄浦区人民路839号</span> · 지하철 예원역(10·14호선) 도보 약 3분 · 10/30 14:00 IN – 11/2 12:00 OUT</small></div>
+        <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">君亭酒店(上海外滩豫园店)</span><button class="cp" type="button">복사</button></div>
+      </div>
+      <div class="full"></div>
+      <div class="trio">
+        <div><div class="k">환율</div><div class="v">1위안 ≈ 200원<small>10/5 시장환율 기준, 수수료 별도</small></div></div>
+        <div><div class="k">기온</div><div class="v">14~20°C<small>11월 초순 평년값, 일교차 큼</small></div></div>
+        <div><div class="k">일몰</div><div class="v">17:06 무렵<small>11/1 기준, 여행 기간 ±2분</small></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabbar" aria-label="일정 탭"><div class="tabbar-inner" id="tabbar"></div></nav>
+
+<main class="wrap">
+
+<!-- ===================== OVERVIEW ===================== -->
+<section class="panel active" data-panel="ov" data-label="한눈에">
+  <div class="day-head"><span class="day-num">한눈에</span><h2>4일 동선 요약</h2></div>
+  <p class="ov-intro">하루 한 방향으로 돌고 숙소(예원)로 돌아오는 구조. 장소마다 고덕지도 영업시간을 도착 시간과 대조해서 전부 열려 있는 시간으로 맞춤. 자세한 주소·검색어·팁은 Day 탭에.</p>
+  <div class="ov-day">
+    <h3>Day1 · 도착 · 와이탄 야경 · 난징동루 · 양꼬치</h3><div class="ov-date">10/30(금)</div>
+    <div class="route-chips"><span class="chip">✈ 홍차오 T1</span><span class="arw">→</span><span class="chip">🏨 예원</span><span class="arw">→</span><span class="chip">그랜드마더</span><span class="arw">→</span><span class="chip">와이탄</span><span class="arw">→</span><span class="chip">난징동루</span><span class="arw">→</span><span class="chip">양꼬치</span><span class="arw">→</span><span class="chip">🏨</span></div>
+    <ol class="ov-tl"><li><span class="t">17:15</span><span>홍차오공항 T1 도착</span></li><li><span class="t">18:00</span><span class="mv">10호선 → 예원역 (12정거장, 29분)</span></li><li><span class="t">18:50</span><span>호텔 체크인</span></li><li><span class="t">19:00</span><span class="mv">10호선 1정거장 → 난징동루역</span></li><li><span class="t">19:10</span><span>그랜드마더 — 홍샤오러우 (가볍게)</span></li><li><span class="t">20:10</span><span>와이탄 야경</span></li><li><span class="t">20:40</span><span>난징동루 쇼핑 · 백련ZX · 차지 (동→서)</span></li><li><span class="t">21:35</span><span>헌지우이치엔 양꼬치 야식 (제1백화점)</span></li><li><span class="t">22:50</span><span class="mv">10호선 1정거장 → 예원역</span></li><li><span class="t">23:05</span><span>숙소</span></li></ol>
+    <div class="ov-foot"><div><b>끼니</b>저녁 그랜드마더 19:10<br>야식 헌지우이치엔 21:35</div><div><b>이동</b>지하철 3번 · 택시 0번</div></div>
+  </div>
+  <div class="ov-day">
+    <h3>Day2 · 헤메 · 포토위드 · 우캉루·안푸루 · 와이탄</h3><div class="ov-date">10/31(토) · 핼러윈</div>
+    <div class="route-chips"><span class="chip">🏨 헤메</span><span class="arw">→</span><span class="chip">난징시루</span><span class="arw">→</span><span class="chip">산시난루</span><span class="arw">→</span><span class="chip">난징시루</span><span class="arw">→</span><span class="chip">징안쓰</span><span class="arw">→</span><span class="chip">창러루</span><span class="arw">→</span><span class="chip">우캉루·안푸루</span><span class="arw">→</span><span class="chip">와이탄</span><span class="arw">→</span><span class="chip">북와이탄</span><span class="arw">→</span><span class="chip">🏨</span></div>
+    <ol class="ov-tl"><li><span class="t">08:30</span><span>호텔 조식 · 루이씽커피</span></li><li><span class="t">10:00</span><span>숙소 헤메 (11시쯤 대호춘 배달 선택)</span></li><li><span class="t">12:55</span><span>포토위드 웨이팅 걸기</span></li><li><span class="t">13:10</span><span>시시포스 — 레트로 디카 사기</span></li><li><span class="t">13:50</span><span>슈슈통</span></li><li><span class="t">14:20</span><span>포토위드 촬영 · 사진 고르기</span></li><li><span class="t">15:05</span><span>사계민복 베이징덕 (중신타이푸점)</span></li><li><span class="t">16:05</span><span class="mv">2호선 1정거장 → 징안쓰</span></li><li><span class="t">16:25</span><span>말랑이가게</span></li><li><span class="t">16:50</span><span>희희 소품샵</span></li><li><span class="t">17:05</span><span>LUCKY LOOP — 헬로키티 시계</span></li><li><span class="t">17:30</span><span>우캉맨션 · 다인서점</span></li><li><span class="t">18:10</span><span>관샤 플래그십</span></li><li><span class="t">18:45</span><span>13 DE MARZO · 하메이</span></li><li><span class="t">19:20</span><span>Tagi</span></li><li><span class="t">19:45</span><span class="mv">10호선 상하이도서관 → 난징동루</span></li><li><span class="t">20:15</span><span>하이디라오 외탄점</span></li><li><span class="t">21:50</span><span>Conde 테라스 바</span></li><li><span class="t">23:05</span><span>숙소</span></li></ol>
+    <div class="ov-foot"><div><b>끼니</b>아침 호텔 08:30<br>점심 사계민복 15:05 (베이징덕)<br>저녁 하이디라오 20:15</div><div><b>이동</b>지하철 2번 · 택시 6번<br>우캉루~Tagi는 전부 걸어서</div></div>
+    <div class="ov-warn">🎃 핼러윈. 2023·2024년에 쥐루루·창러루·화이하이루 일대가 인파·경찰 통제됨. 창러루(희희)는 해 지기 전에만 들르고, 저녁엔 상하이도서관역에서 지하철로 빠져나감.</div>
+  </div>
+  <div class="ov-day">
+    <h3>Day3 · 임시정부 · 신천지 · 인민광장 · 푸동 · 따룬파</h3><div class="ov-date">11/1(일)</div>
+    <div class="route-chips"><span class="chip">🏨 예원</span><span class="arw">→</span><span class="chip">신천지</span><span class="arw">→</span><span class="chip">티엔즈팡</span><span class="arw">→</span><span class="chip">인민광장</span><span class="arw">→</span><span class="chip">루자쭈이</span><span class="arw">→</span><span class="chip">따룬파</span><span class="arw">→</span><span class="chip">🏨</span></div>
+    <ol class="ov-tl"><li><span class="t">08:00</span><span>아침 1안 호텔 조식 / 2안 뤄춘거 셩지엔빠오</span></li><li><span class="t">09:45</span><span class="mv">10호선 → 신천지역</span></li><li><span class="t">10:00</span><span>대한민국 임시정부 유적지</span></li><li><span class="t">10:45</span><span>신천지 · 화이하이중루 · 아마수작</span></li><li><span class="t">11:20</span><span>점도덕 — 딤섬</span></li><li><span class="t">12:30</span><span>티엔즈팡 (헤이티·릴리안·칭즈)</span></li><li><span class="t">14:10</span><span>W.management → 14:30 도원향 발마사지</span></li><li><span class="t">15:40</span><span>모어요거트</span></li><li><span class="t">16:30</span><span>홍쿠이지아 — 마라롱샤</span></li><li><span class="t">17:45</span><span class="mv">14호선 2정거장 → 루자쭈이</span></li><li><span class="t">18:00</span><span>동방명주 야경</span></li><li><span class="t">19:00</span><span>와우뷰티 · 허마</span></li><li><span class="t">20:15</span><span>따룬파 평싱관점 (아이러브상하이 티셔츠)</span></li><li><span class="t">21:55</span><span>숙소 · 짐 싸기 · 레드립스·소양생전·지리우따런 배달</span></li></ol>
+    <div class="ov-foot"><div><b>끼니</b>아침 호텔 또는 뤄춘거<br>점심 점도덕 11:20<br>저녁 홍쿠이지아 16:30<br>야식 레드립스·소양생전·지리우따런 배달</div><div><b>이동</b>지하철 2번 · 택시 3번</div></div>
+  </div>
+  <div class="ov-day">
+    <h3>Day4 · 마지막 쇼핑 · 페이다추 · 리바이셰 · 출국</h3><div class="ov-date">11/2(월)</div>
+    <div class="route-chips"><span class="chip">🏨 체크아웃</span><span class="arw">→</span><span class="chip">마당루</span><span class="arw">→</span><span class="chip">루자방루</span><span class="arw">→</span><span class="chip">인민광장</span><span class="arw">→</span><span class="chip">난징동루</span><span class="arw">→</span><span class="chip">와이탄</span><span class="arw">→</span><span class="chip">예원</span><span class="arw">→</span><span class="chip">팡팡</span><span class="arw">→</span><span class="chip">✈ 홍차오 T1</span></div>
+    <ol class="ov-tl"><li><span class="t">09:00</span><span>체크아웃 · 짐 맡기기</span></li><li><span class="t">09:15</span><span>마당루 수제 지단관빙·지엔빙 아침 (택시 10분)</span></li><li><span class="t">09:40</span><span>노예예노티</span></li><li><span class="t">10:00</span><span>핫맥스 (걸어서 15분)</span></li><li><span class="t">11:00</span><span class="mv">8호선 3정거장 → 인민광장</span></li><li><span class="t">11:20</span><span>점심 1안 페이다추 / 2안 경운화 베이징덕</span></li><li><span class="t">12:15</span><span>미쓰쥐안 에그롤 · 루시허 중국 과자 (선물)</span></li><li><span class="t">12:50</span><span>난징동루 따라 와이탄 낮 산책</span></li><li><span class="t">13:05</span><span>리바이셰 — 망고스틴빙수 · 게살국수 나눠 먹기</span></li><li><span class="t">13:55</span><span>예원 상점가 기념품</span></li><li><span class="t">14:45</span><span>짐 찾아서 택시 → 15:15 팡팡 모찌</span></li><li><span class="t">16:00</span><span>홍차오 T1 (택스리펀 했으면 세관 먼저)</span></li><li><span class="t">18:15</span><span>OZ3625 출발 → 21:20 김포</span></li></ol>
+    <div class="ov-foot"><div><b>끼니</b>아침 마당루 지단관빙 09:15<br>점심 페이다추 또는 경운화 11:20<br>디저트 리바이셰 13:00<br>간식 팡팡 모찌</div><div><b>이동</b>지하철 1번 · 택시 3번 (아침 마당루, 공항 가는 길)</div></div>
+  </div>
+  <div class="ov-check">
+    <h3>점검 결과</h3>
+    <ul>
+      <li>영업시간: 도착 시간 기준 전부 영업 중. 헌지우이치엔은 14:00~16:30 쉬는 시간이 있어서 Day1 야식(21:35)으로 배치.</li>
+      <li>이동: 지하철 8번, 택시 12번. 택시는 지하철이 안 닿는 곳·밤늦게·짐 있을 때만.</li>
+      <li>끼니 간격: 대부분 4~6시간. Day2 아침~점심(6시간 반)은 헤메 중 대호춘 배달이나 포토위드 1층 카페로 채우기.</li>
+      <li>쇼핑 짐: 큰 쇼핑(따룬파)은 Day3 마지막이라 그날 밤 캐리어에 싸고, Day4 쇼핑은 출발 전 호텔에서 짐 찾을 때 정리.</li>
+    </ul>
+  </div>
+  <div class="ov-check">
+    <h3>계획대로 안 될 때</h3>
+    <ul>
+      <li>포토위드 웨이팅이 2시간 넘게 남으면 → 사계민복(걸어서 7~10분, 쉬는 시간 없음) 먼저 먹고 오기. 1시간 안쪽으로 짧으면 → 시시포스는 촬영 끝나고 점심 전에.</li>
+      <li>13 DE MARZO 대기 → 걸어가는 동안 알리페이·위챗 QR로 미리 주문.</li>
+      <li>비 오면 → Day2 우캉루~Tagi 구간만 택시로.</li>
+      <li>헌지우이치엔(금요일 밤) 대기가 길면 → 그랜드마더에서 원격 줄서기를 일찍 걸고, 순서 오기 전까지 난징동루 쇼핑 더 하기.</li>
+    </ul>
+  </div>
+  <div class="ov-check">
+    <h3>아직 확인할 것</h3>
+    <ul>
+      <li>고덕지도로 영업시간 확인: LUCKY LOOP·LABELHOOD(Day2), 뤄춘거 오픈 시간(Day3 아침), 마당루 지단관빙·미쓰쥐안(Day4)</li>
+      <li>고덕지도로 위치 확인: 허마 정대광장 지하 1층 지점, 루시허 래플스시티·난징동루 쪽 지점, 관샤 와이탄점 마감 시간, 零食很忙 동선 근처 매장</li>
+      <li>메이투안으로 숙소 주소 배달 되는지: 대호춘·팡팡 모찌(Day2 헤메 중)</li>
+      <li>칭즈 핸드크림 가게 이름 (티엔즈팡)</li>
+      <li>출발 직전 핼러윈(10/31) 관련 상하이 뉴스</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== DAY 1 ===================== -->
+<section class="panel" data-panel="d1" data-label="Day1">
+  <div class="day-head"><span class="day-num">DAY 1</span><h2>도착 · 와이탄 야경 · 난징동루 · 양꼬치</h2></div>
+  <p class="day-date">10/30(금) — 지하철 1정거장으로 그랜드마더 저녁 → 와이탄 야경 → 난징동루를 동쪽 끝(백련ZX)부터 서쪽으로 쇼핑 → 서쪽 끝 제1백화점에서 헌지우이치엔 양꼬치 야식 → 숙소</p>
+  <div class="route-card">
+    <div class="route-label">동선</div>
+    <div class="route-chips">
+      <span class="chip">✈ 홍차오 T1</span><span class="arw">→</span><span class="chip">🏨 호텔</span><span class="arw">→</span><span class="chip">그랜드마더</span><span class="arw">→</span><span class="chip">와이탄 야경</span><span class="arw">→</span><span class="chip">난징동루 쇼핑·백련ZX</span><span class="arw">→</span><span class="chip">헌지우이치엔 양꼬치</span><span class="arw">→</span><span class="chip">🏨</span>
+    </div>
+    <div class="gmap-row" data-day="d1"></div>
+    <div class="gmap-note">구글 지도 경로 (VPN 필요). 휴대폰에선 경유지가 3곳까지만 들어가서 구간별로 나눔</div>
+  </div>
+
+  <div class="tl">
+    <div class="stop plain"><div class="time">17:15</div><div class="card">
+      <h3>홍차오공항 T1 도착</h3><div class="cn">上海虹桥国际机场 T1 · Shanghai Hongqiao International Airport (SHA) Terminal 1</div>
+      <p>입국심사·수하물 약 40분.</p>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">虹桥国际机场T1航站楼</span><button class="cp" type="button">복사</button></div>
+      <div class="srch"><span class="srch-k">영문</span><span class="srch-v" lang="en">Shanghai Hongqiao International Airport Terminal 1</span><button class="cp" type="button">복사</button></div>
+    </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">18:00 출발</span><span class="line l10">10호선</span><span class="ride-meta">12정거장 · 약 29분 · 1인 ¥4~5</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">虹桥1号航站楼</span><span class="ko">홍차오 1터미널역 · Hongqiao Airport Terminal 1</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">豫园</span><span class="ko">예원역</span></span>
+      </div>
+      <div class="ride-dir">방면: 시내(동쪽). T1에서 타는 열차는 모두 예원역을 지남</div>
+      <div class="ride-walk">탑승 전 터미널 → 역 도보 5~6분, 큰 짐은 <b>1번 출입구</b>. 하차 후 호텔까지 도보 약 3분</div>
+      <div class="ride-alt">택시로 가면 약 30~40분, 약 ¥55~80. 금요일 저녁이라 정체 가능</div>
+    </div></div>
+
+    <div class="stop"><div class="time">18:50</div><div class="card">
+      <h3>호텔 체크인</h3><div class="cn" lang="zh-CN">君亭酒店 · SSAW Boutique Hotel Shanghai Bund</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦区人民路839号</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">君亭酒店(上海外滩豫园店)</span><button class="cp" type="button">복사</button></div>
+    </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">19:00 출발</span><span class="line l10">10호선</span><span class="ride-meta">1정거장 · 약 2분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">豫园</span><span class="ko">예원역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">南京东路</span><span class="ko">난징동루역</span></span>
+      </div>
+      <div class="ride-dir">방면: <b lang="zh-CN">基隆路</b>(또는 <span lang="zh-CN">新江湾城</span>) 방면, 북쪽. 예원 바로 다음 역이라 어느 열차든 OK</div>
+      <div class="ride-walk">숙소 → 예원역 도보 약 3분. 하차 후 4번 출구로 나와 그랜드마더까지 도보 약 3~5분</div>
+      <div class="ride-alt">걸어가면 약 20분</div>
+    </div></div>
+
+    <div class="stop"><div class="time">19:10</div><div class="card">
+      <h3>그랜드마더 — 홍샤오러우</h3><div class="cn">上海姥姥 · Shanghai Grandmother Restaurant</div>
+      <div class="addr">📍 <span lang="zh-CN">九江路399号 华盛大厦 2楼</span> · 난징동루역(2·10호선) 4번 출구 근처</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">上海姥姥 九江路399号</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">예약 가능</span><span class="tag">~21:30 (고덕지도)</span><span class="tag cost">셰어 약 ¥60~90</span><span class="tag book">대기 있음</span></div>
+      <div class="note">첫날 양꼬치 야식도 있으니 홍샤오러우 위주로 가볍게. 8시쯤 일어나서 와이탄으로. 예전 주소(福州路 와이탄 쪽)에서 옮김. 예약 가능은 여행앱 트리플 정보라 다종디엔핑에서 '订座' 버튼 확인. 영어 메뉴판 있고, 물은 유료(12위안). 간판 메뉴는 홍샤오러우.</div>
+      <div class="must">꼭 시키기: <span lang="zh-CN">姥姥红烧肉</span> (계란 같이 나오는 홍샤오러우. 친구 초안의 '동파육'이 이 메뉴)</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>九江路 따라 동쪽 와이탄으로 약 10분 (와이탄 직전에 동방명주 포토스팟)</span></div>
+
+    <div class="stop"><div class="time">20:10</div><div class="card">
+      <h3>와이탄 야경 산책</h3><div class="cn" lang="zh-CN">外滩</div>
+      <div class="tags"><span class="tag warn">조명 22:00 소등</span><span class="tag">금요일 밤이라 붐빔</span></div>
+      <p>강변 전망대에서 푸동 야경. 조명은 22시에 꺼지니까 먼저 보고, 난징동루는 동쪽 끝(백련ZX)부터 서쪽으로 걸으면서 쇼핑.</p>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>📸 포토스팟 — 九江路 동방명주 뷰</b>
+          <div class="addr">📍 <span lang="zh-CN">九江路100号 中国银行(九江路支行) 앞</span> · 九江路가 와이탄과 만나는 끝, 난징동루역 7번 출구에서 약 450m</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">中国银行(九江路支行)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">길 양쪽 옛 건물 사이로 동방명주가 정면에 보이는 구도. '中山东一路' 표지판을 같이 넣어서 찍으라는 인스타 팁. 그랜드마더에서 九江路 따라 오면 바로 지나가는 길. 낮 버전은 Day4 와이탄 산책 때.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 5분, 난징동루 동쪽 끝으로</span></div>
+
+    <div class="stop"><div class="time">20:40</div><div class="card">
+      <h3>난징동루 쇼핑 — 산리오 · 아디다스 · 자라 · 백련ZX</h3><div class="cn" lang="zh-CN">南京路步行街 · 南京东路站 일대</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">南京路步行街</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">매장 ~22:00 (고덕지도)</span><span class="tag">그랜드마더 바로 앞</span></div>
+      <div class="note">와이탄 쪽 동쪽 끝 백련ZX부터 서쪽으로 걸으면서 산리오 기프트게이트·아디다스·자라·차지. 서쪽 끝(제1백화점)에서 바로 양꼬치.</div>
+      <div class="sub-items">
+        <div class="sub-item"><b>백련ZX창취장 — 서브컬처 쇼핑몰</b><span class="tag">~22:00 (고덕지도)</span>
+          <div class="addr">📍 <span lang="zh-CN">南京东路340-372号</span></div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">百联ZX创趣场</span><button class="cp" type="button">복사</button></div></div>
+        <div class="sub-item"><b>산리오 기프트게이트</b><span class="tag">~22:00 (고덕지도)</span></div>
+        <div class="sub-item"><b>아디다스</b><span class="tag">~22:00 (고덕지도)</span></div>
+        <div class="sub-item"><b>자라</b><span class="tag">~22:00 (고덕지도)</span></div>
+        <div class="sub-item"><b>차지 — 밀크티 테이크아웃</b><span class="tag cost">¥16~22</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">霸王茶姬</span><button class="cp" type="button">복사</button></div>
+          <div class="note">지점이 많아서 보행가에서 보이는 곳 아무 데나.</div></div>
+        <div class="sub-item"><b>미쓰쥐안 — 마시멜로 에그롤 (맛보기)</b><span class="tag">南京东路720号</span>
+          <div class="note">선물용은 Day4에 사니까 오늘은 맛만 보기. 영업시간은 고덕지도 확인.</div></div>
+        <div class="sub-item"><b>네이슈 — 과일차 · 빵</b><span class="tag">지점 많음</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">奈雪的茶 南京东路</span><button class="cp" type="button">복사</button></div>
+          <div class="note">체인이라 난징동루·래플스시티 쪽에서 보이는 지점으로.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>보행가 서쪽 끝, 제1백화점 6층으로</span></div>
+
+    <div class="stop"><div class="time">21:35</div><div class="card">
+      <h3>헌지우이치엔 — 양꼬치 야식 (첫날 밤)</h3><div class="cn" lang="zh-CN">很久以前羊肉串(南京路第一百货店)</div>
+      <div class="addr">📍 <span lang="zh-CN">南京东路830号 第一百货 B관 6楼</span> · 인민광장 쪽 난징동루 서쪽 끝</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">很久以前羊肉串(南京路第一百货店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">저녁 16:30–24:00</span><span class="tag cost">1인 약 ¥80~120</span><span class="tag resv">위챗 웨이팅 가능</span></div>
+      <div class="note">위챗으로 웨이팅 걸 수 있음: 위챗에서 '<span lang="zh-CN">很久以前羊肉串</span>' 검색 → 미니프로그램 → 南京路第一百货店 선택 → 줄서기(排队取号). 금요일 밤이라 제일 붐빌 때라 그랜드마더에 있을 때(19시 반쯤) 꼭 걸어두기. 3명은 예약이 안 되고 원격 줄서기로 들어감(큰 테이블만 전화 예약 가능하다는 정보). 쇼핑몰이 22시에 닫으니 21시 반쯤 들어가면 정문으로 들어갈 수 있음. 저녁 16:30~자정 영업. 원래 밤 장사로 시작한 집이라 맥주랑 같이. 연기 안 나는 화로라는 후기.</div>
+      <div class="must">꼭 시키기: 양꼬치 + 스지(<span lang="zh-CN">牛筋</span>) · 곱창(<span lang="zh-CN">牛肠</span>) · 팽이버섯말이(<span lang="zh-CN">金针菇肥牛卷</span>) · 구운 부추(<span lang="zh-CN">烤韭菜</span>) · 오이무침(<span lang="zh-CN">拍黄瓜</span>). 시즈닝 가루에 찍어 먹기. 중국어 메뉴명은 메뉴판에서 확인</div>
+    </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">22:50 출발</span><span class="line l10">10호선</span><span class="ride-meta">1정거장 · 약 2분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">南京东路</span><span class="ko">난징동루역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">豫园</span><span class="ko">예원역</span></span>
+      </div>
+      <div class="ride-dir">방면: 남쪽(<span lang="zh-CN">虹桥火车站 / 航中路</span> 어느 쪽이든 OK)</div>
+      <div class="ride-walk">제1백화점 → 난징동루역 도보 약 5분. 예원역에서 숙소까지 3분</div>
+      <div class="ride-alt">택시면 약 10분, ¥16~20 (23시 넘으면 30% 할증)</div>
+    </div></div>
+
+    <div class="stop plain"><div class="time">23:05</div><div class="card">
+      <h3>숙소 복귀</h3>
+      <p>예원 야경은 숙소 바로 옆이라 들어가는 길에 잠깐. 야식 배달은 Day3 밤으로 옮김.</p>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===================== DAY 2 ===================== -->
+<section class="panel" data-panel="d2" data-label="Day2">
+  <div class="day-head"><span class="day-num">DAY 2</span><h2>헤메 · 포토위드 · 우캉루·안푸루 · 와이탄 · 루프탑</h2></div>
+  <p class="day-date">10/31(토) — 10시 헤메 → 징안 포토위드 웨이팅(대기 중 시시포스에서 카메라 사고 슈슈통) → 촬영 → 사계민복 베이징덕 늦은 점심 → 말랑이 → 희희 → LUCKY LOOP(헬로키티 시계) → 해 진 뒤 우캉맨션 → 관샤 → 안푸루 → Tagi → 10호선 → 와이탄 하이디라오 → 북와이탄 Conde 바</p>
+  <div class="note" style="margin:6px 0 10px">🎃 이날은 핼러윈. 2023·2024년 핼러윈에 쥐루루(巨鹿路)·창러루·화이하이루 일대에 인파가 몰려 경찰이 통제했음. 그래서 창러루(희희)는 해 지기 전에 들르고, 저녁엔 이 일대를 피해 상하이도서관역에서 지하철로 빠져나가는 순서로 짬. 코스프레 복장은 피하기.</div>
+  <div class="route-card">
+    <div class="route-label">동선</div>
+    <div class="route-chips">
+      <span class="chip">🏨 헤메</span><span class="arw">→</span><span class="chip">포토위드 웨이팅</span><span class="arw">→</span><span class="chip">시시포스</span><span class="arw">→</span><span class="chip">슈슈통</span><span class="arw">→</span><span class="chip">포토위드 촬영</span><span class="arw">→</span><span class="chip">사계민복</span><span class="arw">→</span><span class="chip">말랑이</span><span class="arw">→</span><span class="chip">희희 소품샵</span><span class="arw">→</span><span class="chip">LUCKY LOOP</span><span class="arw">→</span><span class="chip">우캉맨션</span><span class="arw">→</span><span class="chip">관샤</span><span class="arw">→</span><span class="chip">안푸루</span><span class="arw">→</span><span class="chip">Tagi</span><span class="arw">→</span><span class="chip">하이디라오</span><span class="arw">→</span><span class="chip">Conde 바</span><span class="arw">→</span><span class="chip">🏨</span>
+    </div>
+    <div class="gmap-row" data-day="d2"></div>
+    <div class="gmap-note">구글 지도 경로 (VPN 필요). 휴대폰에선 경유지가 3곳까지만 들어가서 구간별로 나눔</div>
+  </div>
+
+  <div class="tl">
+    <div class="stop plain"><div class="time">08:30</div><div class="card">
+      <h3>호텔 조식 · 루이씽커피</h3>
+      <div class="sub-items">
+        <div class="sub-item"><b>루이씽커피 — 테이크아웃</b><span class="tag warn">숙소 근처 아무 지점</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">瑞幸咖啡</span><button class="cp" type="button">복사</button></div>
+          <div class="note">위챗 미니프로그램 '<span lang="zh-CN">瑞幸咖啡</span>'으로 주문하고 매장에서 받기. 헤메 받는 동안 마실 것. 점심이 15시라 아침은 든든하게.</div></div>
+      </div>
+    </div></div>
+
+    <div class="stop"><div class="time">10:00</div><div class="card">
+      <h3>숙소 메이크업 &amp; 헤어</h3><div class="cn">객실로 출장</div>
+      <div class="tags"><span class="tag resv">예약 완료</span><span class="tag">10:00 ~ 약 12:30</span><span class="tag cost">1인 ¥369</span></div>
+      <div class="note">렌즈는 직접 챙기기.</div>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>대호춘 셩지엔빠오 — 배달 (선택)</b><span class="tag book">메이투안 배달</span><span class="tag">07:00–19:30 (고덕지도)</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">大壶春</span><button class="cp" type="button">복사</button></div>
+          <div class="note">점심이 15시라 헤메 받으면서 11시쯤 간식으로 먹기 좋음. 19:30에 닫아서 첫날 밤 야식으로는 안 되고 이때가 제일 무난함. 메이투안에서 숙소 주소로 배달되는 지점이 있는지 확인. 배달이면 바닥이 덜 바삭할 수 있음. 새우 셩지엔빠오 + 카레 소고기탕(咖喱牛肉汤).</div></div>
+        <div class="sub-item"><b>팡팡 과일모찌 — 배달 (선택)</b><span class="tag book">메이투안 배달</span><span class="tag">11:00 오픈</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">芳芳手作麻糍(罗秀路店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">배달된다는 후기. 11시 오픈하면 헤메 받는 중에 주문. 가게(쉬후이 罗秀路)에서 숙소까지 거리가 있어서 메이투안에서 숙소 주소로 배달되는지 먼저 확인. 딸기·망고 + 크림치즈, 1개 16위안. 여기서 먹으면 Day4 공항 가는 길에 안 들러도 됨.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>12:30 출발 · 약 20~25분(추정), 징안 쪽으로 · 약 ¥22~30</span></div>
+
+    <div class="stop"><div class="time">12:55</div><div class="card">
+      <h3>포토위드 — 셀프 촬영 스튜디오</h3><div class="cn" lang="zh-CN">PHOTOWITH自助照相馆(何东旧居店)</div>
+      <div class="addr">📍 <span lang="zh-CN">静安区陕西北路457号 何东旧居</span> · 우다커가 설계한 1920년대 양옥</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">PHOTOWITH自助照相馆(何东旧居店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">11:00–19:00 (고덕지도)</span><span class="tag">고덕지도 확인</span><span class="tag">🟩 그린 배경</span><span class="tag">15분 무제한 촬영</span><span class="tag">한 부스 최대 3명</span><span class="tag cost">부스 1회 ¥199~299</span><span class="tag warn">주말 대기 1~3시간 후기</span></div>
+      <div class="note">사진사 없이 커튼 친 독립 부스에서 리모컨으로 직접 찍는 방식. 배경은 green·vintage·white·color·black&amp;white 5가지이고 전부 상반신 촬영. 결제는 현장에서 QR 스캔. 다 찍으면 4장 골라 보정해서 인화하고, 찍은 사진 전부는 에어드롭·위챗으로 받음. 사진으로 CD 만들기(¥69) 같은 추가 옵션 있음. 직원이 영어로 응대. 온라인 예약 방법은 확인 못 함 → 다종디엔핑 앱에서 '预约'(예약)·'排队'(원격 줄서기) 버튼이 있는지 보고, 없으면 도착해서 현장 대기. 웨이팅 걸고 기다리는 동안 택시로 시시포스(카메라 사기) → 슈슈통 다녀오기. 웨이팅이 1시간 안쪽으로 짧으면 시시포스는 촬영 끝나고 사계민복 가기 전에. 밥은 촬영 끝나고. 웨이팅이 2시간 넘게 남았으면 사계민복(걸어서 7~10분, 쉬는 시간 없음)에서 먼저 먹고 오기. 헤메가 한 명씩 끝나면 먼저 끝난 사람이 먼저 가서 웨이팅 걸어두기. 기다리는 동안 '美味不用等'으로 사계민복 번호 받기. 다른 지점: 襄阳南路278弄1号(쉬후이, 그린 배경 여부는 미확인).</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>웨이팅 걸어두고 약 7~8분, 남쪽 산시난루·창러루 쪽 · 기본요금 ¥14~16</span></div>
+
+    <div class="stop"><div class="time">13:10</div><div class="card">
+      <h3>시시포스 — 레트로 디카 가게</h3><div class="cn" lang="zh-CN">西西弗斯相机商店 · Sisyphus Camera Shop</div>
+      <div class="addr">📍 <span lang="zh-CN">陕西南路188弄13号1楼</span> (186弄 골목으로 들어가기) · 창러루 근처, 산시난루역에서 걸어서 약 9분</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">西西弗斯相机商店</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">토 11:00–21:00</span><span class="tag">인스타 sisyphus_shanghai</span></div>
+      <div class="note">2000년대 CCD 디카·즉석카메라·필름카메라 중고 가게. 골목 안 작은 매장이라 찾기 어려우니 186弄 입구로 들어가기. 매장에서 직접 찍어볼 수 있고 작은 배경 앞에서 즉석사진 체험 가능. 재고가 매주 바뀌고, 배터리·메모리카드는 직원이 챙겨줌. 여기서 산 카메라로 바로 포토위드·우캉맨션 노을·와이탄 야경까지 찍기. 살 때 배터리 충전 상태랑 충전기 꼭 확인.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 8분, 북쪽 난징시루 JC PLAZA로 · 기본요금 ¥14~16</span></div>
+
+    <div class="stop"><div class="time">13:50</div><div class="card">
+      <h3>슈슈통 — 옷</h3><div class="cn">SHUSHU/TONG</div>
+      <div class="addr">📍 <span lang="zh-CN">静安区南京西路1225号 锦沧文华广场(JC PLAZA) 2F</span> · 남징시루역(2·12·13호선)에서 약 290m</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">SHUSHU/TONG 锦沧文华广场</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">10:00–22:00 (고덕지도)</span><span class="tag">주소 확인</span></div>
+      <div class="note">중국 디자이너 브랜드 SHUSHU/TONG의 첫 콘셉트 플래그십(2022년 오픈). 초안의 '苏苏通'은 한국어 발음을 옮긴 표기라 검색은 영문으로.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>포토위드 건물로 복귀, 약 5~10분</span></div>
+
+    <div class="stop plain"><div class="time">14:20</div><div class="card">
+      <h3>포토위드 촬영 · 사진 고르기</h3>
+      <p>호출 오면 3층으로. 15분 촬영하고 4장 골라 인화, 찍은 사진 전부는 에어드롭·위챗으로 받기. 산 카메라로도 같이 찍기. 순서가 아직이면 1층 카페에서 기다리기.</p>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 7~10분, 난징시루 쪽 중신타이푸 광장으로</span></div>
+
+    <div class="stop"><div class="time">15:05</div><div class="card">
+      <h3>사계민복 — 베이징덕 (중신타이푸점)</h3><div class="cn" lang="zh-CN">四季民福烤鸭店(中信泰富店)</div>
+      <div class="addr">📍 <span lang="zh-CN">南京西路1168号 中信泰富广场 4楼</span> · 장닝루 근처, 포토위드·슈슈통에서 걸어서 5~10분</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">四季民福烤鸭店(中信泰富店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">베이징덕 확정</span><span class="tag">토 10:30–22:30</span><span class="tag cost">1인 약 ¥190~220</span><span class="tag book">美味不用等 원격 번호표</span></div>
+      <div class="note">중간에 쉬는 시간 없이 계속 영업이라 늦은 점심도 OK. 점심 피크 지난 오후 3시라 대기가 짧을 것. 포토위드 기다리는 동안 '美味不用等'으로 번호 받기. 셋이서 오리 한 마리 시킨 후기 기준.</div>
+    </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">16:05 출발</span><span class="line l2">2호선</span><span class="ride-meta">1정거장 · 약 2분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">南京西路</span><span class="ko">난징시루역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">静安寺</span><span class="ko">징안쓰역</span></span>
+      </div>
+      <div class="ride-dir">방면: 서쪽(<span lang="zh-CN">徐泾东</span> 방면)</div>
+      <div class="ride-walk">사계민복 → 난징시루역 도보 약 5~7분. 하차 후 말랑이가게(愚园路439弄)까지 도보 약 10분(추정)</div>
+      <div class="ride-alt">택시면 약 10분, 약 ¥14~18</div>
+    </div></div>
+
+    <div class="stop"><div class="time">16:25</div><div class="card">
+      <h3>말랑이가게</h3><div class="cn" lang="zh-CN">捏麼好喝(静安设集中心店)</div>
+      <div class="addr">📍 <span lang="zh-CN">静安区愚园路439弄</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">捏麼好喝(静安设集中心店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag cost">약 ¥15~20</span><span class="tag">11:30–20:00 (고덕지도)</span></div>
+      <div class="note">키티·산리오·리락쿠마 등 다른 데서 구하기 어려운 말랑이가 많다는 인스타 후기.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 10분, 남동쪽 창러루로 · 약 ¥14~18</span></div>
+
+    <div class="stop"><div class="time">16:50</div><div class="card">
+      <h3>FZ·H 囍方(희희) — 소품샵</h3><div class="cn" lang="zh-CN">FZ H囍方(富民路255弄小区店)</div>
+      <div class="addr">📍 <span lang="zh-CN">静安区长乐路720号</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">FZ H囍方(富民路255弄小区店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">주소 확인</span><span class="tag">10:00–22:00 (고덕지도)</span></div>
+      <div class="note">친구 초안의 소품샵. 지도 정보엔 의류·잡화 매장으로 등록돼 있음.</div>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>LABELHOOD 蕾虎 — 디자이너 편집숍 (선택)</b><span class="tag warn">영업시간 고덕지도 확인</span>
+          <div class="addr">📍 <span lang="zh-CN">静安区富民路184号</span> · 희희 소품샵이랑 같은 富民路, 걸어서 몇 분</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">LABELHOOD 富民路184号</span><button class="cp" type="button">복사</button></div>
+          <div class="note">층마다 분위기가 다른 중국 디자이너 브랜드들이 모여 있는 편집숍(인스타 후기에서 슈슈통이랑 같이 꼽은 쇼핑 스팟). 들르면 뒤 일정이 15~20분씩 밀리니까, 시간 보고 짧게.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 5분(추정), 신러루로</span></div>
+
+    <div class="stop"><div class="time">17:05</div><div class="card">
+      <h3>LUCKY LOOP — 헬로키티 시계</h3><div class="cn" lang="zh-CN">好运连得 LUCKY LOOP(上海徐汇店)</div>
+      <div class="addr">📍 <span lang="zh-CN">徐汇区新乐路82号</span> · 희희 소품샵에서 걸어서 5분 안팎(추정)</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">好运连得 LUCKY LOOP(上海徐汇店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">메모: 헬로키티 시계</span><span class="tag warn">영업시간 고덕지도 확인</span></div>
+      <div class="note">알리바바 계열(대맥 엔터테인먼트) 캐릭터 굿즈 매장. 인스타 후기 기준 헬로키티 시계(MOETCH)가 1만 원 정도라 선물용으로 좋고, 다른 산리오 캐릭터도 있음. 올해 8월 '상하이 래플스시티'에도 매장이 열렸다는 기사가 있어서, 여기서 못 사면 Day3 모어요거트·Day4 페이다추 갈 때 래플스시티점도 확인(인민광장점이 맞는지는 고덕지도로).</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 8분, 서쪽 우캉루로 · 기본요금 ¥14~16 (핼러윈 저녁 전에 창러루를 미리 빠져나옴)</span></div>
+
+    <div class="stop"><div class="time">17:30</div><div class="card">
+      <h3>우캉맨션 · 다인서점</h3><div class="cn" lang="zh-CN">武康大楼 · 大隐书局</div>
+      <div class="addr">📍 <span lang="zh-CN">武康路 · 淮海中路</span> 교차</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">武康大楼</span><button class="cp" type="button">복사</button></div>
+      <div class="note">일몰(17:06) 뒤라 해 진 직후 푸른 하늘이나 조명 켜진 우캉맨션 사진. 우캉맨션을 설계한 후데크가 포토위드 건물(허둥 저택)도 설계했음.</div>
+      <div class="sub-items">
+        <div class="sub-item"><b>다인서점 — 우캉맨션 1층 책방</b><span class="tag">09:00–21:00 (고덕지도)</span>
+          <div class="addr">📍 <span lang="zh-CN">徐汇区淮海中路1834号-1</span> (우캉맨션 건물)</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">大隐书局(武康大楼店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">입구가 작아서 지나치기 쉬움. 상하이 역사·문화 책과 문구·굿즈가 많고, 잡지 가판대도 있음. 2024년 초 임대 문제로 문 닫을 뻔했다가 재계약해서 계속 영업 중. </div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>우캉루 따라 북쪽으로 약 10~15분(추정). 우캉루 자체가 구경 코스</span></div>
+
+    <div class="stop"><div class="time">18:10</div><div class="card">
+      <h3>관샤 플래그십 — 향수</h3><div class="cn" lang="zh-CN">观夏闲庭 · To Summer</div>
+      <div class="addr">📍 <span lang="zh-CN">湖南路111号</span> (武康路 교차) · 1936년 양옥</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">观夏闲庭</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">11:00–21:00 (고덕지도)</span><span class="tag cost">30ml 약 ¥498 (자료 기준)</span></div>
+      <div class="note">입구에 대기 공간이 따로 있음. 브랜드 분위기를 제일 잘 느낄 수 있는 매장으로 알려져 있어서 여기로.</div>
+      <div class="sub-items">
+        <div class="sub-item"><b>관샤 와이탄점 (대안)</b><span class="tag warn">영업시간 고덕지도 확인</span>
+          <div class="addr">📍 <span lang="zh-CN">黄浦区圆明园路149号 洛克外滩源 1层 S0102</span></div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">观夏 洛克外滩源</span><button class="cp" type="button">복사</button></div>
+          <div class="note">와이탄 북쪽 끝 록번드(외탄위안). Day2 밤 하이디라오 → Conde 가는 길 근처라, 플래그십에서 못 산 게 있으면 들르기. Day1 와이탄 야경 때도 가까움.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 8분(추정), 우캉루 따라 남쪽 안푸루 입구로. 걸어가는 동안 13 DE MARZO QR 선주문</span></div>
+
+    <div class="stop"><div class="time">18:45</div><div class="card">
+      <h3>13 DE MARZO — 곰돌이 컵 카페</h3><div class="cn">13 DE MARZO</div>
+      <div class="addr">📍 <span lang="zh-CN">徐汇区安福路322号</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">13DE MARZO 安福路</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">10:00–21:30</span><span class="tag cost">음료 ¥26~55</span><span class="tag book">알리페이·위챗 QR 선주문</span></div>
+      <div class="note">주말엔 1시간 넘게 기다린다는 후기. 알리페이·위챗으로 QR 찍어 미리 주문하고 화면 번호 확인 후 픽업. 기다리는 동안 2층 의류 매장 구경. 테이크아웃 위주라 좌석은 거의 없음.</div>
+      <div class="sub-items">
+        <div class="sub-item"><b>하메이 플래그십 — 길 건너편</b>
+          <div class="addr">📍 <span lang="zh-CN">武康路55号</span> (안푸루·우캉루 교차로) · 4층 매장</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">HARMAY话梅 武康路55号</span><button class="cp" type="button">복사</button></div>
+          <div class="note">음료 기다리는 동안 다녀오기.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>안푸루 따라 동쪽 끝까지 약 8분(추정)</span></div>
+
+    <div class="stop"><div class="time">19:20</div><div class="card">
+      <h3>Tagi — 폰케이스</h3><div class="cn" lang="zh-CN">Tagi. 乌鲁木齐中路店</div>
+      <div class="addr">📍 <span lang="zh-CN">徐汇区乌鲁木齐中路263号</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">Tagi. 乌鲁木齐中路店</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">10:00–21:00</span><span class="tag">고덕지도 확인 완료</span></div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 5~10분(추정), 화이하이중루 상하이도서관역으로</span></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">19:45 출발</span><span class="line l10">10호선</span><span class="ride-meta">6정거장 · 약 13분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">上海图书馆</span><span class="ko">상하이도서관역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">南京东路</span><span class="ko">난징동루역</span></span>
+      </div>
+      <div class="ride-dir">방면: 동쪽(<span lang="zh-CN">基隆路</span> 방면). 陕西南路 → 新天地 → 老西门 → 豫园 → 南京东路</div>
+      <div class="ride-walk">하차 후 하이디라오 외탄점(南京东路123号)까지 도보 약 5~10분</div>
+      <div class="ride-alt">택시면 약 25분, 약 ¥25~35 (핼러윈이라 화이하이루 쪽 차가 막힐 수 있음)</div>
+    </div></div>
+
+    <div class="stop"><div class="time">20:15</div><div class="card">
+      <h3>하이디라오 — 훠궈</h3><div class="cn" lang="zh-CN">海底捞火锅(外滩店)</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦区南京东路123号 外滩中央 5楼</span> · 난징동루역에서 와이탄 방향</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">海底捞火锅(外滩店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">예약 가능</span><span class="tag">11:00–다음날 07:00</span><span class="tag cost">1인 약 ¥130~180</span></div>
+      <div class="note">하이디라오 앱·위챗 미니프로그램('海底捞' 검색 → 订座)·다종디엔핑에서 이 지점으로 10/31(토) 20:15, 3명 예약. 예약 확인 문자가 와야 확정. 예약 못 하면 앱으로 원격 번호표. 다른 후보: 제1백화점 5층 인민광장점(南京东路830号).</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 15분, 와이탄 따라 북쪽 끝으로 (택시면 약 5분, 기본요금 ¥14~16)</span></div>
+
+    <div class="stop"><div class="time">21:50</div><div class="card">
+      <h3>Conde 테라스 바 — 야경 루프탑</h3><div class="cn" lang="zh-CN">Conde露台吧 · 上海海鸥丽晶酒店</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦路60号</span> · 리젠트 상하이 온 더 번드</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">上海海鸥丽晶酒店</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">예약 가능</span><span class="tag">토 14:30–다음날 01:00</span><span class="tag">워크인 가능</span><span class="tag cost">칵테일 2~3만원대</span></div>
+      <div class="note">투숙객 아니어도 이용 가능, 미니멈 차지 없음, 올리브·캐슈넛 기본 제공(후기 기준).</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 15분, 숙소로</span></div>
+
+    <div class="stop plain"><div class="time">23:05</div><div class="card">
+      <h3>숙소 복귀</h3>
+      <p>택시 약 15분, 약 ¥18~25 (23시 넘으면 30% 할증).</p>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===================== DAY 3 ===================== -->
+<section class="panel" data-panel="d3" data-label="Day3">
+  <div class="day-head"><span class="day-num">DAY 3</span><h2>임시정부 · 신천지 · 티엔즈팡 · 인민광장 · 푸동 · 따룬파</h2></div>
+  <p class="day-date">11/1(일) — 9시 45분 출발. 임시정부 → 신천지·화이하이중루 → 점도덕 → 티엔즈팡 → 인민광장(도원향) → 마라롱샤 저녁 → 푸동 야경·와우뷰티 → 따룬파(아이러브상하이 티셔츠) → 숙소에서 짐 싸고 레드립스·소양생전 배달</p>
+  <div class="route-card">
+    <div class="route-label">동선</div>
+    <div class="route-chips">
+      <span class="chip">🏨 호텔</span><span class="arw">→</span><span class="chip">임시정부</span><span class="arw">→</span><span class="chip">신천지</span><span class="arw">→</span><span class="chip">점도덕</span><span class="arw">→</span><span class="chip">티엔즈팡</span><span class="arw">→</span><span class="chip">도원향</span><span class="arw">→</span><span class="chip">홍쿠이지아</span><span class="arw">→</span><span class="chip">동방명주</span><span class="arw">→</span><span class="chip">와우뷰티</span><span class="arw">→</span><span class="chip">따룬파</span><span class="arw">→</span><span class="chip">🏨 짐 싸기 · 야식 배달</span>
+    </div>
+    <div class="gmap-row" data-day="d3"></div>
+    <div class="gmap-note">구글 지도 경로 (VPN 필요). 휴대폰에선 경유지가 3곳까지만 들어가서 구간별로 나눔</div>
+  </div>
+
+  <div class="tl">
+    <div class="stop"><div class="time">08:00</div><div class="card">
+      <h3>아침 — 1안 호텔 조식 / 2안 뤄춘거 셩지엔빠오</h3>
+      <div class="sub-items">
+        <div class="sub-item"><b>1안 호텔 조식</b><span class="tag">08:30</span>
+          <div class="note">09:45 예원역에서 10호선 타고 신천지로.</div></div>
+        <div class="sub-item"><b>2안 뤄춘거 — 100년 된 셩지엔빠오</b><span class="tag warn">오픈 시간 고덕지도 확인</span>
+          <div class="cn" lang="zh-CN">萝春阁 · 生煎</div>
+          <div class="addr">📍 <span lang="zh-CN">浙江中路425号</span> · 난징동루 근처(예원역에서 10호선 1정거장 → 난징동루역)</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">萝春阁 浙江中路425号</span><button class="cp" type="button">복사</button></div>
+          <div class="note">1920~30년대에 시작한 상하이 셩지엔빠오 원조로 꼽히는 집. 오래 문을 닫았다가 올해 1월 浙江中路425号에 다시 열었고, 1량(4개) 9위안. 매일 한정 수량이라 문 열고 1시간 반이면 다 팔린다는 기사가 있어서 오픈 시간에 맞춰 가기. 인스타 후기엔 게살·돼지고기 샤오롱바오, 게살국수도 있다고 함. 다 먹으면 난징동루역에서 10호선 3정거장 → 신천지역.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">09:45 출발</span><span class="line l10">10호선</span><span class="ride-meta">2정거장 (2안이면 난징동루역에서 3정거장) · 약 5분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">豫园</span><span class="ko">예원역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">一大会址·新天地</span><span class="ko">신천지역</span></span>
+      </div>
+      <div class="ride-dir">방면: 서쪽(<span lang="zh-CN">虹桥火车站 / 航中路</span> 어느 쪽이든 OK). 老西门 다음 역</div>
+      <div class="ride-walk">출발 전에 아마수작 미니프로그램으로 음료 미리 주문(10시 45분쯤 픽업). 하차 후 임시정부까지 도보</div>
+    </div></div>
+
+    <div class="stop"><div class="time">10:00</div><div class="card">
+      <h3>대한민국 임시정부 유적지</h3><div class="cn" lang="zh-CN">大韩民国临时政府旧址</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦区马当路306弄4号</span> · 신천지 바로 옆</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">大韩民国临时政府旧址</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">09:00–11:30 · 13:30–17:00</span><span class="tag cost">입장료 ¥20</span><span class="tag warn">오전 입장 11:00까지</span></div>
+      <div class="note">점심시간(11:30~13:30)엔 문을 닫아서 오전에 봄. 내부 사진 촬영 불가. 관람은 30분~1시간.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>신천지로, 약 5분</span></div>
+
+    <div class="stop"><div class="time">10:45</div><div class="card">
+      <h3>신천지 산책 · 화이하이중루</h3>
+      <p>여기서 점도덕 원격 줄서기 걸어두기. 화이하이중루(淮海中路)가 신천지 바로 북쪽이라 잠깐 걸어보기(Day2는 핼러윈 통제 구역이라 이쪽으로 옮김).</p><div class="cn" lang="zh-CN">新天地</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">新天地</span><button class="cp" type="button">복사</button></div>
+      <div class="sub-items">
+        <div class="sub-item"><b>아마수작 — 음료 픽업</b><span class="tag book">미니프로그램 선주문</span><span class="tag">09:00–22:00 (고덕지도)</span>
+          <div class="addr">📍 <span lang="zh-CN">兴业路123弄 新天地6号楼 1楼</span></div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">阿嬷手作(上海新天地店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">앞에 100잔 정도 밀려 있는 게 보통이라, 9시 반 출발 전에 주문해두고 여기서 받기. 🥭 망고코코넛 추천 후기 있음.</div>
+          <div class="must">주문 메모: 메뉴 <span lang="zh-CN">打·米麻薯</span> · 차 <span lang="zh-CN">斯里兰卡</span>(스리랑카) · 재료 <span lang="zh-CN">芋泥麻薯</span>(타로 모찌) · 치즈폼 <span lang="zh-CN">灼烧黑糖芝士</span>(구운 흑당 치즈폼) · 당도 <span lang="zh-CN">多糖</span>(달게) · 얼음 <span lang="zh-CN">正常冰</span>(기본)</div></div>
+        <div class="sub-item"><b>하메이 신천지점 — 화장품 (선택)</b>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">HARMAY话梅(新天地店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">지도 정보에 주소가 두 가지(兴业路123弄6号 / 黄陂南路380号 The House)로 나와서 고덕지도로 확인. 전날(Day2) 안푸루 플래그십에 들렀으면 건너뛰어도 됨.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 15~20분, 남쪽 마당루역 쪽 (택시면 약 5분, 기본요금 ¥14~16)</span></div>
+
+    <div class="stop"><div class="time">11:20</div><div class="card">
+      <h3>점도덕 — 딤섬</h3><div class="cn" lang="zh-CN">点都德(中海环宇荟店)</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦区黄陂南路838弄 中海环宇荟 B1 (B125)</span> · 마당루역(9·13호선) 5번 출구 도보 약 4~6분</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">点都德(中海环宇荟店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">09:30–21:30</span><span class="tag cost">1인 약 ¥80~110</span><span class="tag warn">예약 불가</span><span class="tag book">다종디엔핑 원격 줄서기</span><span class="tag book">메이투안 배달 가능</span></div>
+      <div class="note">신천지 중심에서 남쪽으로 조금 내려간 쇼핑몰 지하 1층. 다종디엔핑에서 신천지/마당루 지역 판매 1위. 위챗 공식계정으로도 미리 번호표를 받을 수 있다는 후기. 일요일 점심 30~40분 대기 후기, 대기 중 땅콩·쿠키 제공. 주문은 테이블 QR(알리페이), 차는 1인 1개 필수(약 8위안). 배달도 되니까 대기가 너무 길거나 또 먹고 싶으면 숙소에서 메이투안으로 시키기. 마당루역 4번 출구 길 건너(马当路616号)가 Day4 아침에 갈 수제 지단관빙 가게라, 지나가면서 위치 봐두기.</div>
+      <div class="must">꼭 시키기: 홍미창펀(<span lang="zh-CN">金莎海虾红米肠</span>) · 오이무침(보통 <span lang="zh-CN">拍黄瓜</span>)</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 10분(추정), 다푸차오 쪽 티엔즈팡으로</span></div>
+
+    <div class="stop"><div class="time">12:30</div><div class="card">
+      <h3>티엔즈팡 — 골목 상점가</h3><div class="cn" lang="zh-CN">田子坊 · 泰康路一带</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">田子坊</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag warn">가게별 영업시간 다름</span></div>
+      <div class="sub-items">
+        <div class="sub-item"><b>헤이티</b><span class="tag cost">¥18~28</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">喜茶 田子坊</span><button class="cp" type="button">복사</button></div>
+          <div class="note">🥭 망고 음료 추천 후기 있음.</div></div>
+        <div class="sub-item"><b>릴리안 에그타르트</b><span class="tag cost">¥8~10</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">莉莲蛋挞 田子坊</span><button class="cp" type="button">복사</button></div></div>
+        <div class="sub-item"><b>칭즈 핸드크림</b><span class="tag warn">매장명 미확인</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">QINGZHI 护手霜 田子坊</span><button class="cp" type="button">복사</button></div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 15분, 북쪽 인민광장 제1백화점으로 · 약 ¥18~24</span></div>
+
+    <div class="stop"><div class="time">14:30</div><div class="card">
+      <h3>도원향 — 발마사지</h3><div class="cn" lang="zh-CN">桃源乡足浴</div>
+      <div class="addr">📍 제1백화점 7층 (인민광장 플래그십)</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">桃源乡(人民广场旗舰店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">예약 가능</span><span class="tag">11:00–24:00</span><span class="tag cost">60분 발마사지 35,900원</span></div>
+      <div class="note">마이리얼트립으로 예약(정상가보다 할인, 현장 대기 없이 바로). 예약 없이 가면 대기가 길다는 후기 많음.</div>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>W.management — 같은 건물 지하 1층 옷가게</b><span class="tag">10:00–22:00</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">W.Management(第一百货南京东路店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">Y2K·키치한 스타일 여성복 브랜드. 1층에 핑크색 쇼윈도가 있고 실제 매장은 지하 1층 전체. 매장 안에 카페도 있음. 도원향 전에 먼저 들르기(14:10쯤). 정대광장 3층(와우뷰티와 같은 층)에도 매장이 있음.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 5~10분, 인민광장 래플스시티로</span></div>
+
+    <div class="stop"><div class="time">15:40</div><div class="card">
+      <h3>모어요거트 — 아보카도 요거트</h3><div class="cn" lang="zh-CN">茉酸奶 More Yogurt</div>
+      <div class="addr">📍 <span lang="zh-CN">西藏中路268号 来福士广场 6楼 SPK10B</span> · 인민광장역 근처</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">茉酸奶(人广来福士广场店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">~21:30 (고덕지도)</span><span class="tag cost">아보카도 요거트 약 ¥29</span><span class="tag book">테이크아웃</span><span class="tag book">메이투안 배달 가능</span></div>
+      <div class="note">초안 표기 '莫酸奶'는 오기, 브랜드는 茉酸奶. 래플스시티 지점 후기는 지하층이라고 적었는데 지도 정보는 6층이라 현장에서 층 안내 확인. 배달도 되니까 못 들르거나 또 먹고 싶으면 숙소에서 메이투안으로 시키기.</div>
+      <div class="must">꼭 시키기: 아보카도 요거트 오리지널</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 15분, 남동쪽 진링둥루로 (홍쿠이지아 16:30 오픈)</span></div>
+
+    <div class="stop"><div class="time">16:30</div><div class="card">
+      <h3>홍쿠이지아 — 마라롱샤</h3><div class="cn" lang="zh-CN">红盔甲 · 小龙虾</div>
+      <div class="addr">📍 <span lang="zh-CN">金陵东路500号 亚龙国际广场 2楼</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">红盔甲(人民广场店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">11:00–14:00 · 16:30–02:00</span><span class="tag cost">1인 약 ¥100~150</span><span class="tag book">현장 대기</span></div>
+      <div class="note">앱으로 줄서기가 안 돼서 현장에서 30분 기다렸다는 후기. 일요일 저녁 시간이라 대기 있을 수 있음. 롱샤 껍질은 직원이 까줌.</div>
+      <div class="must">꼭 시키기: 마라롱샤(<span lang="zh-CN">麻辣小龙虾</span>) · 마늘롱샤(<span lang="zh-CN">蒜蓉小龙虾</span>) · 옥수수튀김. 옥수수튀김은 메뉴판에서 <span lang="zh-CN">玉米</span> 들어간 튀김 메뉴로 찾기</div>
+    </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">17:45 출발</span><span class="line l14">14호선</span><span class="ride-meta">2정거장 · 약 5분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">大世界</span><span class="ko">다스제역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">陆家嘴</span><span class="ko">루자쭈이역</span></span>
+      </div>
+      <div class="ride-dir">방면: <b lang="zh-CN">桂桥路</b> 방면(동쪽). 豫园 다음이 陆家嘴</div>
+      <div class="ride-walk">홍쿠이지아 → 다스제역 도보 약 5분. 하차 후 동방명주까지 도보</div>
+      <div class="ride-alt">택시면 약 15~20분, 약 ¥18~25</div>
+    </div></div>
+
+    <div class="stop"><div class="time">18:00</div><div class="card">
+      <h3>동방명주 — 야경</h3><div class="cn" lang="zh-CN">东方明珠</div>
+      <div class="addr">📍 <span lang="zh-CN">浦东新区世纪大道1号</span></div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">东方明珠</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">예약 가능</span><span class="tag">09:00–21:00 (20:30 입장 마감)</span><span class="tag cost">2구 관광 약 ¥200</span></div>
+      <div class="note">해 진 뒤(일몰 17:06 무렵)라 야경으로 봄. 입장 마감 20:30. 입장권은 실명 예매라 여권 정보 필요, 당일 구매도 가능.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>바로 옆</span></div>
+
+    <div class="stop"><div class="time">19:00</div><div class="card">
+      <h3>와우뷰티 — 주디돌 · 플라워노즈</h3><div class="cn" lang="zh-CN">WOW BEAUTY · 正大广场 3楼</div>
+      <div class="addr">📍 정대광장(Super Brand Mall) 3층 · 루자쭈이역(2·14호선) 2번 출구</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">WOW BEAUTY 正大广场</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">10:00–22:00 (고덕지도)</span><span class="tag">정대광장 3층 확인</span><span class="tag">주디돌 입점</span></div>
+      <div class="note">정대광장 WOW BEAUTY는 브랜드 쪽 '도시 대표 매장'으로 소개된 곳. 올해 2월 후기 기준 주디돌·JOOCYEE·Dasique 등이 있음. 플라워노즈는 WOW BEAUTY가 주요 오프라인 판매처지만 매장별 재고는 다를 수 있어서, 플라워노즈는 재고가 없을 수도 있어서 매장에서 확인. 같은 3층에 W.management 매장도 있음.</div>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>허마선생 — 과자·간식 (같은 건물 지하 1층)</b><span class="tag warn">위치 고덕지도 확인</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">盒马鲜生(陆家嘴店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">친구 초안에 있던 마트. 정대광장 지하 1층(陆家嘴环路168号 正大广场 B1)에 지점이 있다는 자료가 있음. 없으면 다른 후보: 제1백화점 지하 1층 난징동루점(도원향 건물), 티엔즈팡 옆 르웨광중신(日月光中心)점.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 25~30분(추정), 강 건너 북쪽 징안으로 · 약 ¥35~45</span></div>
+
+    <div class="stop"><div class="time">20:15</div><div class="card">
+      <h3>따룬파 평싱관점 — 한국인 필수 마트</h3><div class="cn" lang="zh-CN">大润发(平型关店)</div>
+      <div class="addr">📍 <span lang="zh-CN">静安区 平型关路</span> · 인민광장에서 북쪽으로 약 4km</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">大润发(平型关店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">08:00–22:00 (고덕지도)</span><span class="tag">한국어 안내·전용 계산대</span><span class="tag">즉시 택스리펀</span><span class="tag">카카오페이</span></div>
+      <div class="note">한국 SNS에서 유명해져서 주말엔 한국인이 500명 넘게 오는 지점. 매장 안내가 한국어로도 돼 있고 한국인 전용 계산대가 있음. 200위안 이상 사면 그 자리에서 9% 택스리펀(여권·신용카드 보증 필요, 출국 때 공항 세관 확인 필수), 카카오페이로 300위안 이상 결제하면 25위안 할인. 입구에 짐 보관함 있음. 오늘 마지막 코스라 산 건 바로 숙소 가서 캐리어에 싸기. 나올 때 메이투안으로 야식 배달 주문. 길 건너편에서 지엔빙·지단관빙도 판다는 후기. 22:00 마감이라 21:30까지는 계산 끝내기(즉시 택스리펀 창구 저녁 운영 여부는 현장에서 확인). 아이러브상하이 티셔츠도 여기가 제일 싸고 재질이 좋다는 한국인 후기(인민광장에서 파는 건 비쌈). 한국인이 많이 사는 건 산즈쑹수 마카다미아(<span lang="zh-CN">三只松鼠夏威夷果</span>)·오리 에그롤(<span lang="zh-CN">小黄鸭蛋卷</span>)·고수맛 라면 등.</div>
+    <div class="must">찾을 것: 每日黑巧 鲜脂奶巧 초콜릿 (링스헌망 후기에서 강추한 초콜릿, 있으면 사기)</div>
+      </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 20~25분(추정), 숙소로 · 약 ¥30~40</span></div>
+
+    <div class="stop plain"><div class="time">21:55</div><div class="card">
+      <h3>숙소 복귀 · 짐 싸기 · 야식 배달</h3>
+      <p>레드립스 마라반, 소양생전, 지리우따런은 꼭 시키기. 셋 다 다른 가게라 메이투안에서 가게마다 따로 주문해야 하고 배달비도 따로 붙음. 같은 시간에 한꺼번에 주문해두면 비슷하게 도착해서 같이 먹을 수 있음. 따룬파에서 나올 때(21:30쯤) 주문해두면 숙소 도착할 즈음 옴. 기다리는 동안 따룬파에서 산 것 캐리어에 정리.</p>
+      <div class="sub-items">
+        <div class="sub-item"><b>레드립스 — 마라반</b><span class="tag resv">꼭 시키기</span><span class="tag book">메이투안 배달</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">红唇串串香</span><button class="cp" type="button">복사</button></div>
+          <div class="note">한국인이 많이 시키는 마라반 집. 향신료가 약한 편이라 중국 향신료 싫어하는 사람한테 맞는다는 후기. 메모에 소스 많이(<span lang="zh-CN">酱多一点</span>) 적으라는 팁 있음.</div></div>
+        <div class="sub-item"><b>모어요거트 — 아보카도 요거트 오리지널</b><span class="tag">추가</span><span class="tag book">메이투안 배달</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">茉酸奶</span><button class="cp" type="button">복사</button></div>
+          <div class="note">매운 레드립스 마라반이랑 같이 먹기 좋음. 낮에 래플스시티점에서 먹었어도 한 번 더.</div></div>
+        <div class="sub-item"><b>소양생전 — 만두 (셩지엔빠오)</b><span class="tag resv">꼭 시키기</span><span class="tag book">메이투안 배달</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">小杨生煎</span><button class="cp" type="button">복사</button></div>
+          <div class="note">피가 얇고 안에 국물이 많은 스타일. 대호춘은 국물 적은 스타일이라 비교해 먹기 좋음. 체인이라 매장도 많음.</div></div>
+        <div class="sub-item"><b>🥭 고체 양즈깐루 · 양즈깐루 · 망고</b><span class="tag">선택</span><span class="tag book">메이투안 배달</span><span class="tag cost">¥20~40</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">固体杨枝甘露</span><button class="cp" type="button">복사</button></div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">杨枝甘露</span><button class="cp" type="button">복사</button></div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">百果园</span><button class="cp" type="button">복사</button></div>
+          <div class="note">고체 양즈깐루는 망고 반쪽 위에 요거트·자몽·사고를 올린 디저트로, 작년 11월 중국에서 크게 유행함. 망고가 달고 싸다는 한국인 후기 있음. 생망고·과일은 과일 체인 바이궈위안(百果园)에서 배달시켰다는 후기.</div></div>
+        <div class="sub-item"><b>쉐메이니앙 — 과일 찹쌀떡</b><span class="tag">선택</span><span class="tag book">메이투안 배달</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">雪媚娘</span><button class="cp" type="button">복사</button></div>
+          <div class="note">얇은 찹쌀피에 생크림·과일을 싼 디저트. 팡팡 모찌는 Day4 공항 가는 길에 들르니까 오늘 밤엔 이걸로.</div></div>
+        <div class="sub-item"><b>지리우따런 — 닭튀김 · 떡 · 감튀</b><span class="tag resv">꼭 시키기</span><span class="tag book">메이투안 배달</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">鸡柳大人</span><button class="cp" type="button">복사</button></div>
+          <div class="note">중국 전국 체인. 치킨·떡·감자튀김에 양념 가루를 뿌려주는데 중독성 있다는 후기. 친구 배달 리스트의 '지리유따런'이 이 집.</div></div>
+        <div class="sub-item"><b>위안지윈자오 — 마라땅콩 게살새우만두</b><span class="tag">추가</span><span class="tag book">메이투안 배달</span>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">袁记云饺</span><button class="cp" type="button">복사</button></div>
+          <div class="note">한국인 후기 속 '상하이 배달 맛집'. 댓글엔 '袁记云饭'으로 적혀 있는데, 만두·완탕 체인 '袁记云饺'로 보임(메이투안에서 '袁记'로 검색). 새우·게알 들어간 만두를 마라·땅콩 소스로 먹는 메뉴. 그냥 시키지 말고 소스 추가해야 맛있다는 팁. 아삭한 숙주도 같이 들어 있음.</div></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===================== DAY 4 ===================== -->
+<section class="panel" data-panel="d4" data-label="Day4">
+  <div class="day-head"><span class="day-num">DAY 4</span><h2>마지막 쇼핑 · 출국</h2></div>
+  <p class="day-date">11/2(월) — 아침에 체크아웃하고 짐 맡긴 뒤, 마당루 수제 지단관빙 아침 → 핫맥스 → 8호선 → 페이다추 점심 → 미쓰쥐안 에그롤 사기 → 난징동루 따라 와이탄 낮 산책 → 리바이셰 빙수 → 예원 기념품 → 택시로 팡팡 모찌 들러서 홍차오 T1</p>
+  <div class="route-card">
+    <div class="route-label">동선</div>
+    <div class="route-chips">
+      <span class="chip">🏨 체크아웃</span><span class="arw">→</span><span class="chip">마당루 지단관빙</span><span class="arw">→</span><span class="chip">노예예노티</span><span class="arw">→</span><span class="chip">핫맥스</span><span class="arw">→</span><span class="chip">페이다추 (2안 경운화)</span><span class="arw">→</span><span class="chip">미쓰쥐안 · 루시허</span><span class="arw">→</span><span class="chip">와이탄 낮</span><span class="arw">→</span><span class="chip">리바이셰 빙수</span><span class="arw">→</span><span class="chip">예원 상점가</span><span class="arw">→</span><span class="chip">🏨 짐 찾기</span><span class="arw">→</span><span class="chip">팡팡 모찌</span><span class="arw">→</span><span class="chip">✈ 홍차오 T1</span>
+    </div>
+    <div class="gmap-row" data-day="d4"></div>
+    <div class="gmap-note">구글 지도 경로 (VPN 필요). 휴대폰에선 경유지가 3곳까지만 들어가서 구간별로 나눔</div>
+  </div>
+
+  <div class="tl">
+    <div class="stop plain"><div class="time">09:00</div><div class="card">
+      <h3>체크아웃 · 짐 맡기기</h3>
+      <p>아침에 미리 체크아웃하고 프런트에 짐 맡기기. 그래야 낮에 숙소로 돌아올 필요가 없음.</p>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 10분, 남서쪽 마당루역 쪽 · 기본요금 ¥14~18 (지하철이면 10호선 2정거장 신천지역 + 도보 약 15분)</span></div>
+
+    <div class="stop"><div class="time">09:15</div><div class="card">
+      <h3>지단관빙 · 지엔빙 아침 — 마당루 수제 반죽집</h3><div class="cn" lang="zh-CN">鸡蛋灌饼 · 煎饼果子</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦区马当路616号</span> · 마당루역(9·13호선) 4번 출구 길 건너</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">马当路616号</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">꼭 먹기</span><span class="tag cost">¥8~15</span><span class="tag warn">가게 이름·영업시간 고덕지도 확인</span></div>
+      <div class="note">호텔 조식 대신. 반죽을 직접 해서 쫀득하다는 인스타 후기. 지단관빙은 촉촉한 팬케이크 느낌, 지엔빙은 바삭한 크레페 느낌. 지단관빙은 달걀물 + 감자채·오이 넣고 매콤한 소스 꼭(조금만) 넣어달라고 하기. 핫맥스 가는 길이라 동선도 딱 맞음.</div>
+      <div class="sub-items">
+        <div class="sub-item"><b>다른 선택지 (지엔빙)</b>
+          <div class="note">숙소 근처 노점이나 난징동루 산동잡곡전병(<span lang="zh-CN">山东杂粮煎饼 德仁里店</span>, 한국어 메뉴판·풀토핑 추천)도 있지만, 마당루로 가는 게 핫맥스 동선이랑 맞음.</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">山东杂粮煎饼(德仁里店)</span><button class="cp" type="button">복사</button></div></div>
+      </div>
+    </div></div>
+
+    <div class="stop"><div class="time">09:40</div><div class="card">
+      <h3>노예예노티 — 밀크티</h3><div class="cn" lang="zh-CN">爷爷不泡茶</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">爷爷不泡茶</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag cost">¥15~20</span><span class="tag">09:00–21:30 (고덕지도)</span></div>
+      <div class="note">상하이에만 100곳 넘게 있음. 마당루~루자방루 사이 가까운 지점을 고덕지도로 찾기.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>동쪽 루자방루역 쪽으로 약 15분(추정), 또는 9호선 1정거장(马当路 → 陆家浜路)</span></div>
+
+    <div class="stop"><div class="time">10:00</div><div class="card">
+      <h3>핫맥스 — 할인 간식·기념품</h3><div class="cn" lang="zh-CN">好特卖 HotMaxx</div>
+      <div class="addr">📍 지하철 8·9호선 루자방루역(<span lang="zh-CN">陆家浜路</span>) 2번 출구 바로 앞</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">好特卖 陆家浜路</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">10:00–22:00 (고덕지도)</span></div>
+      <div class="note">후기에서 매장이 크고 물건이 많다고 꼽은 지점. 유통기한 짧은 할인 상품이 섞여 있으니 날짜 확인.</div>
+    <div class="must">찾을 것: 每日黑巧 鲜脂奶巧 초콜릿 (링스헌망 후기에서 강추한 초콜릿, 있으면 사기)</div>
+      </div></div>
+
+    <div class="leg"><div class="ride">
+      <div class="ride-top"><span class="ride-when">11:00 출발</span><span class="line l8">8호선</span><span class="ride-meta">3정거장 · 약 6분 · 1인 ¥3</span></div>
+      <div class="ride-st">
+        <span class="lbl">탑승</span><span><span class="zh" lang="zh-CN">陆家浜路</span><span class="ko">루자방루역</span></span>
+        <span class="lbl">하차</span><span><span class="zh" lang="zh-CN">人民广场</span><span class="ko">인민광장역</span></span>
+      </div>
+      <div class="ride-dir">방면: 북쪽(<span lang="zh-CN">市光路</span> 방면). 老西门 → 大世界 → 人民广场</div>
+      <div class="ride-walk">핫맥스는 루자방루역 2번 출구 앞. 인민광장역 나와서 바로 래플스시티</div>
+      <div class="ride-alt">택시면 약 15분, 약 ¥16~22</div>
+    </div></div>
+
+    <div class="stop"><div class="time">11:20</div><div class="card">
+      <h3>점심 1안 페이다추 — 고추돼지고기볶음</h3><div class="cn" lang="zh-CN">费大厨辣椒炒肉(人广来福士店)</div>
+      <div class="addr">📍 <span lang="zh-CN">西藏中路268号 来福士广场 7楼</span> · 인민광장역 바로 앞, 모어요거트랑 같은 건물</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">费大厨辣椒炒肉(人广来福士店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">11:00–21:30</span><span class="tag cost">1인 약 ¥80~100</span></div>
+      <div class="note">후난 요리 체인. 밥에 고기 반찬이라 중국 음식 질릴 때 먹기 좋다는 집이고, 밥 리필이 핵심. 월요일 오픈 직후라 대기 거의 없을 것.</div>
+      <div class="must">꼭 시키기: <span lang="zh-CN">辣椒炒肉</span>(고추돼지고기볶음) · 댓글 추천: 산차이(<span lang="zh-CN">酸菜</span>)·죽순 볶음, 생선 요리</div>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>2안 경운화 — 베이징덕 2인 세트</b><span class="tag">10:30–15:00 · 16:30–21:00</span><span class="tag cost">2인 세트 245위안</span>
+          <div class="cn" lang="zh-CN">京云华(新世界城店)</div>
+          <div class="addr">📍 <span lang="zh-CN">南京西路12-62号 新世界城 8楼</span> · 인민광장역 근처, 래플스시티에서 걸어서 5~10분(추정). 인스타엔 9층이라고도 적혀 있어 고덕지도로 층 확인</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">京云华(新世界城店)</span><button class="cp" type="button">복사</button></div>
+          <div class="note">2인 세트(베이징덕·마파두부·볶음밥 등)가 245위안이라 1인 2만 원대라는 후기. 베이징덕은 Day2 사계민복으로 정했으니 기본은 1안 페이다추.</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 5분, 난징동루 보행가 서쪽으로</span></div>
+
+    <div class="stop"><div class="time">12:15</div><div class="card">
+      <h3>미쓰쥐안 · 루시허 — 에그롤 · 중국 과자 (선물 사기)</h3><div class="cn" lang="zh-CN">迷丝卷 Ms.Juan 手工方形蛋卷 (南京东路店)</div>
+      <div class="addr">📍 <span lang="zh-CN">黄浦区南京东路720号</span> · 난징동루 보행가 서쪽, 페이다추에서 걸어서 몇 분</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">迷丝卷 南京东路</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag resv">꼭 사기</span><span class="tag cost">선물세트 34위안</span><span class="tag warn">영업시간 고덕지도 확인</span></div>
+      <div class="note">바삭한 사각 에그롤 안에 쫀득한 마시멜로가 든 디저트. 간식으로도 선물용으로도 좋다는 후기. 마지막 날이라 바로 캐리어에 넣어 가져가기 좋음. 다른 지점: 普陀区新会路236弄1号 鸿寿坊(멀어서 일정엔 안 넣음).</div>
+    
+      <div class="sub-items">
+        <div class="sub-item"><b>루시허 — 중국식 과자 · 디저트 (같이 사기)</b><span class="tag warn">가까운 지점 고덕지도 확인</span>
+          <div class="cn" lang="zh-CN">泸溪河</div>
+          <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">泸溪河</span><button class="cp" type="button">복사</button></div>
+          <div class="note">2013년 난징에서 시작한 중국식 베이커리 체인. 상하이에만 50곳 넘게 있고 절반 정도가 쇼핑몰 안이라, 래플스시티·난징동루 쪽 쇼핑몰 지점을 고덕지도로 찾아서 미쓰쥐안 살 때 같이 사기. 대표 메뉴: 桃酥(호두 쿠키), 绿豆冰糕(녹두 케이크), 肉松小贝(육송 빵), 爆浆麻薯(크림 모찌), 乳酪蛋黄(치즈 노른자 과자).</div></div>
+      </div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>난징동루 보행가 따라 동쪽 와이탄으로 약 15~20분</span></div>
+
+    <div class="stop plain"><div class="time">12:50</div><div class="card">
+      <h3>와이탄 낮 산책</h3>
+      <p>난징동루 따라 걸어 나와서 강변을 따라 남쪽으로 걷기. 끝 지점이 외탄22호(리바이셰). 난징동루에서 한 블록 남쪽 九江路 끝(九江路100号 중국은행 앞)에서 동방명주 낮 사진도.</p>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>강변 따라 남쪽으로 약 15분, 외탄22호 건물로</span></div>
+
+    <div class="stop"><div class="time">13:05</div><div class="card">
+      <h3>리바이셰 — 망고스틴빙수 · 게살국수 나눠 먹기</h3><div class="cn" lang="zh-CN">李百蟹 · 蟹黄面 · 山竹冰</div>
+      <div class="addr">📍 <span lang="zh-CN">外滩22号 3楼 (中山东二路22号)</span> · 강뷰 · 예원역 7번 출구 도보 약 7분</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">李百蟹·蟹黄面·江景餐厅·外滩豫园店</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">10:00–22:00</span><span class="tag cost">1인 약 ¥80~120</span><span class="tag warn">예약 불가</span><span class="tag book">현장 대기</span></div>
+      <div class="note">점심은 페이다추에서 먹었으니 디저트 코스로. 망고스틴빙수에 게살국수 하나 시켜서 셋이 나눠 먹기. 예약은 안 되고 현장 대기, 창가는 들어갈 때 요청(낮엔 와이탄·푸동 강뷰). 주문은 테이블 QR.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚶 도보</span><span>약 10분, 예원으로</span></div>
+
+    <div class="stop"><div class="time">13:55</div><div class="card">
+      <h3>예원 상점가 — 기념품</h3><div class="cn" lang="zh-CN">豫园商城</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">豫园商城</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag warn">가게별 영업시간 다름</span></div>
+      <div class="note">숙소 바로 옆. 남은 위안화 현금은 여기서 쓰기. 14:40쯤 호텔에서 짐 찾기. 기념품 볼 시간이 넉넉함.</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>14:45 짐 찾아서 출발 · 약 25~30분(추정), 남서쪽 쉬후이로 · 약 ¥40~50</span></div>
+
+    <div class="stop"><div class="time">15:15</div><div class="card">
+      <h3>팡팡수제모찌 — 상하이 과일모찌</h3><div class="cn" lang="zh-CN">芳芳手作麻糍(罗秀路店)</div>
+      <div class="addr">📍 <span lang="zh-CN">徐汇区罗秀路897号 创邑MIX·罗秀路 F2 219-1</span> · 15호선 罗秀路역 2번 출구 도보 약 9분</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">芳芳手作麻糍(罗秀路店)</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">11:00–21:00 (고덕지도)</span><span class="tag cost">1개 ¥16~22</span><span class="tag">공항 가는 길</span><span class="tag book">메이투안 배달 가능</span></div>
+      <div class="note">초안의 '우베리'는 한국 백화점 팝업 브랜드라 상하이엔 매장이 없어서, 한국 여행자들이 가는 상하이 과일모찌집으로 대체. 매장에 가서 포장해 온 후기 기준 1개 16위안(오레오 초코·양즈깐루·딸기 크림치즈 등). 생과일·크림이 들어가서 한국까지 들고 가지 말고 공항에서 체크인 전에 먹기. 배달도 된다는 후기가 있어서, Day2 헤메 받을 때 배달로 먹었으면 여기는 건너뛰고 공항 직행(15:00 예원역 10호선 虹桥火车站행 29분, 또는 택시).</div>
+    </div></div>
+
+    <div class="leg leg-walk"><span class="mode">🚕 택시</span><span>약 25~30분(추정), 홍차오공항 T1로 · 약 ¥45~60 (기사님께 '1号航站楼' / 'Terminal 1' 꼭 말하기)</span></div>
+
+    <div class="stop"><div class="time">16:00</div><div class="card">
+      <h3>홍차오 T1 출국 수속</h3><div class="cn">上海虹桥国际机场 T1 · Shanghai Hongqiao International Airport (SHA) Terminal 1</div>
+      <div class="srch"><span class="srch-k">고덕지도</span><span class="srch-v" lang="zh-CN">虹桥国际机场T1航站楼</span><button class="cp" type="button">복사</button></div>
+      <div class="srch"><span class="srch-k">영문</span><span class="srch-v" lang="en">Shanghai Hongqiao International Airport Terminal 1</span><button class="cp" type="button">복사</button></div>
+      <div class="tags"><span class="tag">출발 2시간 15분 전</span><span class="tag warn">택스리펀 했으면 세관 먼저</span></div>
+      <div class="note">아시아나는 출발 최소 2시간 전 공항 도착을 권장. 따룬파에서 즉시 택스리펀을 받았으면 순서가 중요함: ① 체크인 전에 T1 2층 국제선 출발장 근처 세관 창구에서 산 물건·영수증·환급신청서·여권 보여주고 도장 → ② 체크인(물건은 도장 받기 전에 부치지 말 것) → ③ 보안검색 뒤 T09 게이트 맞은편 환급 대행 창구에 도장 받은 서류 제출. 이걸 안 하면 현장에서 받은 환급금이 보증 걸어둔 신용카드로 다시 빠져나감. 세관 15~30분, 환급 창구 10~20분 걸린다는 안내. 팡팡 안 들르고 지하철로 바로 가려면 15:00 예원역에서 10호선(虹桥火车站 Hongqiao Railway Station행) 29분.</div>
+    </div></div>
+
+    <div class="stop plain"><div class="time">18:15</div><div class="card">
+      <h3>OZ3625 홍차오 출발 → 21:20 김포 도착</h3>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===================== REGIONS ===================== -->
+<section class="panel" data-panel="rg" data-label="지역별">
+  <div class="day-head"><span class="day-num">지역별</span><h2>동네별로 모아 보기</h2></div>
+  <p class="ov-intro">같은 동네에 있는 곳은 같은 날 묶어서 다니도록 짰음. 오른쪽 표시가 가는 날.</p>
+  <div class="rg">
+    <h3>예원 (숙소 주변)</h3><div class="rg-sub">숙소 SSAW 부티크 호텔 · 예원역 도보 3분</div>
+    <dl><dt>식사</dt><dd>찌엔빙·찌단관삥 노점<span class="d">Day4</span></dd><dt>카페</dt><dd>루이씽커피<span class="d">Day2</span><br>노예예노티<span class="d">Day4</span></dd><dt>쇼핑</dt><dd>예원 상점가 기념품<span class="d">Day4</span></dd><dt>구경</dt><dd>예원 야경<span class="d">Day1</span></dd><dt>배달</dt><dd>대호춘 셩지엔빠오<span class="d">Day2</span><br>레드립스 마라반 · 소양생전 · 지리우따런 (꼭)<span class="d">Day3</span><br>모어요거트 아보카도 요거트 · 위안지윈자오 마라땅콩 게살새우만두 · 양즈깐루 · 쉐메이니앙 · 과일 (선택)<span class="d">Day3</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>와이탄</h3>
+    <dl><dt>식사</dt><dd>하이디라오 외탄점<span class="d">Day2</span><br>리바이셰 빙수·게살국수 (外滩22号, 남쪽 끝)<span class="d">Day4</span></dd><dt>구경</dt><dd>와이탄 야경<span class="d">Day1</span><br>九江路 동방명주 포토스팟<span class="d">Day1 밤 · Day4 낮</span><br>와이탄 낮 산책<span class="d">Day4</span></dd><dt>쇼핑</dt><dd>관샤 와이탄점 (록번드, 대안)<span class="d">Day2</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>북와이탄</h3>
+    <dl><dt>바</dt><dd>Conde 테라스 바<span class="d">Day2</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>난징동루</h3><div class="rg-sub">그랜드마더·쇼핑·백련ZX가 난징동루역 주변에 모여 있음</div>
+    <dl><dt>식사</dt><dd>그랜드마더 (上海姥姥)<span class="d">Day1</span><br>뤄춘거 셩지엔빠오 (아침 2안)<span class="d">Day3</span><br>산동잡곡전병 지엔빙 (아침 대안)<span class="d">Day4</span></dd><dt>쇼핑</dt><dd>산리오 기프트게이트·자라·아디다스<span class="d">Day1</span><br>백련ZX<span class="d">Day1</span><br>미쓰쥐안 마시멜로 에그롤 · 루시허 중국 과자 (선물)<span class="d">Day4</span></dd><dt>카페</dt><dd>차지·네이슈<span class="d">Day1</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>인민광장</h3><div class="rg-sub">제1백화점(헌지우이치엔·도원향·W.management) 한 건물, 래플스시티(모어요거트·페이다추) 한 건물</div>
+    <dl><dt>식사</dt><dd>헌지우이치엔 양꼬치 야식 (제1백화점)<span class="d">Day1</span><br>홍쿠이지아 (마라롱샤)<span class="d">Day3</span><br>페이다추 (래플스시티 7층, 점심 1안)<span class="d">Day4</span><br>경운화 베이징덕 (신세계성, 점심 2안)<span class="d">Day4</span></dd><dt>쇼핑</dt><dd>W.management 제1백화점 B1<span class="d">Day3</span></dd><dt>마사지</dt><dd>도원향 제1백화점 7층<span class="d">Day3</span></dd><dt>디저트</dt><dd>모어요거트 래플스시티<span class="d">Day3</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>난징시루 · 징안쓰</h3>
+    <dl><dt>체험</dt><dd>포토위드 허둥 저택점 (그린 배경)<span class="d">Day2</span></dd><dt>식사</dt><dd>사계민복 중신타이푸점 (베이징덕)<span class="d">Day2</span></dd><dt>쇼핑</dt><dd>슈슈통 (SHUSHU/TONG)<span class="d">Day2</span><br>말랑이가게 (위위안루)<span class="d">Day2</span></dd><dt>카페</dt><dd>허둥 저택 1층 카페<span class="d">Day2</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>신천지 · 티엔즈팡</h3>
+    <dl><dt>구경</dt><dd>대한민국 임시정부 유적지<span class="d">Day3</span><br>신천지 · 화이하이중루<span class="d">Day3</span></dd><dt>식사</dt><dd>점도덕 (중하이 환위회점)<span class="d">Day3</span><br>마당루 수제 지단관빙 (아침)<span class="d">Day4</span></dd><dt>카페</dt><dd>아마수작<span class="d">Day3</span><br>헤이티 (티엔즈팡)<span class="d">Day3</span></dd><dt>디저트</dt><dd>릴리안 에그타르트<span class="d">Day3</span></dd><dt>쇼핑</dt><dd>티엔즈팡 골목 · 칭즈 핸드크림<span class="d">Day3</span><br>하메이 신천지점 (선택)<span class="d">Day3</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>창러루 · 산시난루</h3><div class="rg-sub">핼러윈(토) 저녁엔 피할 동네라 둘 다 해 지기 전에</div>
+    <dl><dt>쇼핑</dt><dd>시시포스 레트로 디카 가게<span class="d">Day2</span><br>희희 소품샵 (FZ·H 囍方)<span class="d">Day2</span><br>LUCKY LOOP (헬로키티 시계)<span class="d">Day2</span><br>LABELHOOD 디자이너 편집숍 (선택)<span class="d">Day2</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>우캉루 · 안푸루</h3><div class="rg-sub">전부 걸어서 이어지는 구간</div>
+    <dl><dt>구경</dt><dd>우캉맨션<span class="d">Day2</span></dd><dt>쇼핑</dt><dd>다인서점<span class="d">Day2</span><br>관샤 플래그십<span class="d">Day2</span><br>하메이 플래그십<span class="d">Day2</span><br>Tagi<span class="d">Day2</span></dd><dt>카페</dt><dd>13 DE MARZO<span class="d">Day2</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>루자쭈이 (동방명주 쪽)</h3>
+    <dl><dt>구경</dt><dd>동방명주<span class="d">Day3</span></dd><dt>쇼핑</dt><dd>와우뷰티 정대광장 3층<span class="d">Day3</span><br>허마 정대광장 B1<span class="d">Day3</span></dd></dl>
+  </div>
+  <div class="rg">
+    <h3>떨어져 있는 곳</h3>
+    <dl><dt>쇼핑</dt><dd>따룬파 평싱관점 (징안 북쪽)<span class="d">Day3 밤</span><br>핫맥스 루자방루점<span class="d">Day4</span></dd><dt>디저트</dt><dd>팡팡 수제모찌 (공항 가는 길)<span class="d">Day4</span></dd></dl>
+  </div>
+</section>
+
+<!-- ===================== TRANSIT ===================== -->
+<section class="panel" data-panel="metro" data-label="지하철">
+  <h2 class="sec-title">지하철 탑승 정리</h2>
+  <p class="sec-lead">일정에 들어간 지하철 구간 전부. 소요시간은 열차 탑승 시간만이고, 역까지 걷는 시간은 빠져 있음.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>언제</th><th>노선</th><th>탑승</th><th>하차</th><th>방면</th><th>정거장 · 시간</th><th>요금(1인)</th></tr></thead>
+    <tbody>
+      <tr><td>Day1 18:00</td><td><span class="line l10">10호선</span></td><td><span class="zh" lang="zh-CN">虹桥1号航站楼</span><br>홍차오 1터미널<br><span lang="en">Hongqiao Airport Terminal 1</span></td><td><span class="zh" lang="zh-CN">豫园</span><br>예원</td><td>시내(동쪽), T1발 전부 OK</td><td>12 · 약 29분</td><td>¥4~5</td></tr>
+      <tr><td>Day1 19:00</td><td><span class="line l10">10호선</span></td><td><span class="zh" lang="zh-CN">豫园</span><br>예원</td><td><span class="zh" lang="zh-CN">南京东路</span><br>난징동루</td><td>북쪽, 아무 열차</td><td>1 · 약 2분</td><td>¥3</td></tr>
+      <tr><td>Day1 22:50</td><td><span class="line l10">10호선</span></td><td><span class="zh" lang="zh-CN">南京东路</span><br>난징동루</td><td><span class="zh" lang="zh-CN">豫园</span><br>예원</td><td>남쪽, 아무 열차</td><td>1 · 약 2분</td><td>¥3</td></tr>
+      <tr><td>Day2 16:05</td><td><span class="line l2">2호선</span></td><td><span class="zh" lang="zh-CN">南京西路</span><br>난징시루</td><td><span class="zh" lang="zh-CN">静安寺</span><br>징안쓰</td><td>서쪽(<span lang="zh-CN">徐泾东</span>)</td><td>1 · 약 2분</td><td>¥3</td></tr>
+      <tr><td>Day2 19:45</td><td><span class="line l10">10호선</span></td><td><span class="zh" lang="zh-CN">上海图书馆</span><br>상하이도서관</td><td><span class="zh" lang="zh-CN">南京东路</span><br>난징동루</td><td>동쪽(<span lang="zh-CN">基隆路</span>)</td><td>6 · 약 13분</td><td>¥3</td></tr>
+      <tr><td>Day3 09:45</td><td><span class="line l10">10호선</span></td><td><span class="zh" lang="zh-CN">豫园</span><br>예원</td><td><span class="zh" lang="zh-CN">一大会址·新天地</span><br>신천지</td><td>서쪽, 아무 열차</td><td>2 · 약 5분</td><td>¥3</td></tr>
+      <tr><td>Day3 17:45</td><td><span class="line l14">14호선</span></td><td><span class="zh" lang="zh-CN">大世界</span><br>다스제</td><td><span class="zh" lang="zh-CN">陆家嘴</span><br>루자쭈이</td><td lang="zh-CN">桂桥路</td><td>2 · 약 5분</td><td>¥3</td></tr>
+      <tr><td>Day4 11:00</td><td><span class="line l8">8호선</span></td><td><span class="zh" lang="zh-CN">陆家浜路</span><br>루자방루</td><td><span class="zh" lang="zh-CN">人民广场</span><br>인민광장</td><td lang="zh-CN">市光路</td><td>3 · 약 6분</td><td>¥3</td></tr>
+      <tr><td>Day4 (팡팡 안 들르면) 15:00</td><td><span class="line l10">10호선</span></td><td><span class="zh" lang="zh-CN">豫园</span><br>예원</td><td><span class="zh" lang="zh-CN">虹桥1号航站楼</span><br>홍차오 1터미널<br><span lang="en">Hongqiao Airport Terminal 1</span></td><td><b lang="zh-CN">虹桥火车站</b>행만</td><td>12 · 약 29분</td><td>¥4~5</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grp-title">요금 기준</div>
+  <ul class="tips">
+    <li>지하철은 거리 요금이야. 6km 이하 ¥3, 6~16km ¥4, 16~26km ¥5, 그 뒤로 10km마다 ¥1씩 추가. 일정대로 타면 1인 총 약 ¥20~22.</li>
+    <li>택시는 낮(05:00~23:00) 기본 3km ¥14~16, 3~15km는 1km당 ¥2.7, 15km 넘으면 1km당 ¥3.6. 밤(23:00~05:00)은 약 30% 비싸져.</li>
+    <li>막히거나 시속 12km 아래로 기면 4분마다 1.5km 요금이 붙어서, 표시한 금액보다 더 나올 수 있어.</li>
+    <li>일정에 적은 택시비는 이 기준에 거리를 넣어 계산한 대략치고, 차 1대 요금이라 3명이 나눠 내면 돼. 디디는 부르기 전에 예상 요금이 나오니 그걸 기준으로.</li>
+  </ul>
+
+  <div class="grp-title">알아둘 것</div>
+  <ul class="tips">
+    <li>숙소 앞 예원역(<span lang="zh-CN">豫园</span>)은 10호선과 14호선이 다 서서 대부분 구간이 환승 없이 해결됨.</li>
+    <li>홍차오 T1에는 10호선만 다님. 2호선은 T1에 안 섬.</li>
+    <li>10호선 서쪽 방향은 <span lang="zh-CN">龙溪路</span>역에서 두 갈래로 나뉨. 같은 승강장에 <span lang="zh-CN">虹桥火车站</span>(Hongqiao Railway Station)행과 <span lang="zh-CN">航中路</span>(Hangzhong Road)행이 번갈아 들어오니까, 공항 갈 땐 전광판·열차 앞 표시가 <span lang="zh-CN">虹桥火车站</span>인 것만 타기. <span lang="zh-CN">航中路</span>행을 탔으면 <span lang="zh-CN">龙溪路</span>까지 가서 내린 뒤 다음 <span lang="zh-CN">虹桥火车站</span>행으로 갈아타면 됨. 공항에서 시내로 올 땐 어느 열차든 예원역을 지나감.</li>
+    <li>홍차오 T1역은 큰 짐이면 1번 출입구. 3번 출입구엔 대형 짐 게이트가 없음.</li>
+    <li>승차는 역 자동발매기, 또는 위챗 '<span lang="zh-CN">乘车码</span>' 미니프로그램.</li>
+    <li>열차 간격은 10호선 기준 약 10분 이내. 출발 시각은 고덕지도로 당일 확인.</li>
+  </ul>
+
+  <div class="footnote">
+    <b>시간 기준</b> — 홍차오 T1 ↔ 예원 29분은 <a href="https://www.rome2rio.com/s/Yu-Garden/Hongqiao-Airport-Terminal-1-Station" target="_blank" rel="noopener">rome2rio</a> 기준. 14호선 구간은 <a href="https://www.icauto.com.cn/chuxing/dt_123.html" target="_blank" rel="noopener">역별 운행표</a>의 시각 차이로 계산. 나머지 구간은 정거장 수 × 2~3분으로 잡은 추정치. 지하철 요금 체계는 <a href="https://namu.wiki/w/%EC%83%81%ED%95%98%EC%9D%B4%20%EC%A7%80%ED%95%98%EC%B2%A0" target="_blank" rel="noopener">나무위키 상하이 지하철</a>, 택시 요금은 <a href="https://www.meet-in-shanghai.net/cn/traffic/taxicab-051700/" target="_blank" rel="noopener">상하이 문화관광 홍보 사이트</a>·<a href="https://yhzuche.com/zczxy/29.html" target="_blank" rel="noopener">요금 안내</a> 기준. 공항 ↔ 예원 지하철은 약 16~17km로 잡아 ¥4~5로 적음.
+  </div>
+</section>
+
+<!-- ===================== TODO ===================== -->
+<section class="panel" data-panel="todo" data-label="예약 To-do">
+  <div class="grp-title">사전 예약</div>
+  <label class="check"><input type="checkbox" data-id="r1"><div><div class="t">숙소 메이크업 · 헤어 ✔ 예약 완료</div><div class="d">Day2(토) 10:00 · 약 2시간 30분 · 1인 ¥369 (3명 ¥1,107)</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r2"><div><div class="t">포토위드(PHOTOWITH 何东旧居店) · 그린 배경</div><div class="d">Day2(토) 13:00쯤 · 부스 1회 ¥199~299, 3명 한 부스 · 다종디엔핑에 '预约'·'排队' 있으면 사용, 없으면 현장 대기(주말 1~3시간 후기)</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r3"><div><div class="t">도원향 발마사지</div><div class="d">Day3(일) 14:30 · 마이리얼트립 (60분 35,900원)</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r6"><div><div class="t">하이디라오 외탄점</div><div class="d">Day2 10/31(토) 20:15 · 3명 · 앱 · 위챗 미니프로그램 · 다종디엔핑 '订座'</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r7"><div><div class="t">그랜드마더</div><div class="d">Day1 19:10 · 다종디엔핑에서 '订座' 버튼 있는지 확인</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r4"><div><div class="t">Conde 테라스 바 (선택)</div><div class="d">Day2 21:50 · 토요일은 새벽 1시까지 · 워크인 가능, 예약도 가능</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r5"><div><div class="t">동방명주 입장권 (선택)</div><div class="d">실명 예매 · 당일 구매도 가능</div></div></label>
+  <label class="check"><input type="checkbox" data-id="r8"><div><div class="t">리바이셰 2인 게 코스 (선택)</div><div class="d">예약은 불가, 코스만 다종디엔핑(258위안)·KKday·클룩에서 사전 구매</div></div></label>
+
+  <div class="grp-title">당일 줄서기 · 주문</div>
+  <label class="check"><input type="checkbox" data-id="w2"><div><div class="t">헌지우이치엔 (Day1 야식) · 위챗 웨이팅 가능</div><div class="d">Day1 19시 반쯤(그랜드마더에서) · 위챗에서 '<span lang="zh-CN">很久以前羊肉串</span>' 검색 → 남징루 제1백화점점 원격 줄서기. 3명은 예약 불가, 금요일 밤이라 일찍</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w4"><div><div class="t">점도덕</div><div class="d">Day3 10:45쯤(신천지에서) · 다종디엔핑 '<span lang="zh-CN">排队</span>' 원격 줄서기, 위챗 공식계정 번호표도 가능</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w7"><div><div class="t">아마수작</div><div class="d">Day3 09:45 출발 전 · 위챗 미니프로그램 '<span lang="zh-CN">阿嬷手作</span>'에서 신천지점 선주문</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w8"><div><div class="t">사계민복 (중신타이푸점)</div><div class="d">Day2 14시쯤(포토위드 대기 중) · '<span lang="zh-CN">美味不用等</span>'으로 원격 번호표</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w6"><div><div class="t">13 DE MARZO</div><div class="d">Day2 · 도착 전 알리페이·위챗 QR 선주문, 화면 번호로 픽업</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w3"><div><div class="t">홍쿠이지아</div><div class="d">Day3 16:30 · 앱 줄서기 안 됨, 현장 대기 (30분 후기)</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w9"><div><div class="t">따룬파 택스리펀 했으면 공항 세관 확인</div><div class="d">Day4 · 체크인 전에 T1 2층 세관 창구 → 보안검색 뒤 T09 맞은편 환급 창구. 산 물건은 도장 받기 전에 부치지 않기</div></div></label>
+  <label class="check"><input type="checkbox" data-id="w1"><div><div class="t">리바이셰</div><div class="d">Day4 13:05 · 빙수·게살국수 나눠 먹기, 현장 대기, 창가 자리는 입장할 때 요청</div></div></label>
+
+  <div class="grp-title">앱 · 결제 · 통신</div>
+  <label class="check"><input type="checkbox" data-id="a1"><div><div class="t">알리페이 해외카드 등록</div></div></label>
+  <label class="check"><input type="checkbox" data-id="a2"><div><div class="t">위챗페이 등록</div><div class="d">줄서기 · 미니프로그램 · 지하철 <span lang="zh-CN">乘车码</span>에 필요</div></div></label>
+  <label class="check"><input type="checkbox" data-id="a3"><div><div class="t">고덕지도 · 다종디엔핑 · 메이투안 설치</div><div class="d"><span lang="zh-CN">高德地图 · 大众点评 · 美团</span>. 다종디엔핑은 +82 번호로 가입되니 출국 전 로그인·문자 인증까지 테스트</div></div></label>
+  <label class="check"><input type="checkbox" data-id="a4"><div><div class="t">eSIM 또는 유심</div></div></label>
+  <label class="check"><input type="checkbox" data-id="a5"><div><div class="t">VPN</div><div class="d">출국 전에 설치</div></div></label>
+
+  <div class="grp-title">출발 전 확인</div>
+  <label class="check"><input type="checkbox" data-id="c1"><div><div class="t">항공편 시간 · 터미널</div><div class="d">e티켓 기준</div></div></label>
+  <label class="check"><input type="checkbox" data-id="c3"><div><div class="t">점도덕 — 다종디엔핑 '排队' 버튼 확인</div><div class="d">주소는 黄陂南路838弄 中海环宇荟 B1로 확인됨</div></div></label>
+  <label class="check"><input type="checkbox" data-id="c13"><div><div class="t">고덕지도에서 '零食很忙' 검색</div><div class="d">숙소·인민광장·난징동루 근처에 매장 있으면 추가 (웹에선 시 외곽 매장만 찾음)</div></div></label>
+  <label class="check"><input type="checkbox" data-id="c12"><div><div class="t">허마선생 정대광장 지하 1층 지점</div><div class="d">Day3 와우뷰티 때 같이 들를 예정 · 없으면 제1백화점 B1 또는 르웨광중신점</div></div></label>
+</section>
+
+<!-- ===================== PACK ===================== -->
+<section class="panel" data-panel="pack" data-label="준비물">
+  <p class="sec-lead">11월 초순 상하이는 평년 14~20°C, 일교차 큼. 출발 3일 전 예보 확인. 한국 여권은 무비자 입국.</p>
+  <div class="pack-grid">
+    <div class="pack-cat"><h4>서류</h4><ul><li>여권 (무비자 입국)</li><li>항공권 · 숙소 바우처 캡처</li><li>여행자보험</li></ul></div>
+    <div class="pack-cat"><h4>결제 · 통신</h4><ul><li>알리페이/위챗페이 등록 카드 실물</li><li>위안화 소액 현금</li><li>eSIM 또는 유심</li><li>보조배터리 (기내 휴대)</li></ul></div>
+    <div class="pack-cat"><h4>옷</h4><ul><li>편한 신발</li><li>얇은 겉옷 · 가디건</li><li>포토위드 촬영용 의상</li><li>우산 또는 우비</li></ul></div>
+    <div class="pack-cat"><h4>기타</h4><ul><li>상비약 (소화제 · 감기약 · 밴드)</li><li>세면도구</li><li>플러그 어댑터 (필요시)</li><li>접이식 에코백 (마트 봉투 유료)</li><li>캐리어 여유 공간</li></ul></div>
+  </div>
+  <div class="footnote">
+    <b>가격</b>은 초안의 1인 추정치, <b>이동 시간</b>은 주소 기준 추정치. '미확인' 표시는 검색으로 확인하지 못한 정보라 다종디엔핑 · 고덕지도에서 한 번 더 확인.<br>
+    <b>상단 정보 출처</b> — 환율: <a href="https://kr.investing.com/currencies/cny-krw-historical-data" target="_blank" rel="noopener">Investing.com</a> 10/5 종가 200.23원 · 기온: <a href="https://proxy-www.chinahighlights.com/shanghai/weather/november.htm" target="_blank" rel="noopener">China Highlights</a> 11월 초순 평년 · 일몰: <a href="https://www.weather2travel.com/november/china/shanghai.php" target="_blank" rel="noopener">weather2travel</a> 2026.11.1
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var bar=document.getElementById('tabbar');
+  var panels=[].slice.call(document.querySelectorAll('.panel'));
+  panels.forEach(function(p,i){
+    var b=document.createElement('button');
+    b.type='button';
+    b.className='tab'+(i===0?' active':'');
+    b.textContent=p.dataset.label;
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
+      panels.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      p.classList.add('active');
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var tb=document.querySelector('.tabbar');
+      var y=tb.parentNode===document.body?tb.offsetTop:tb.getBoundingClientRect().top+window.scrollY;
+      if(window.scrollY>y){window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});}
+    });
+    bar.appendChild(b);
+  });
+
+  // 구글 지도 구간별 경로 (모바일 경유지 3곳 제한에 맞춰 분할)
+  var HOTEL='上海市黄浦区人民路839号';
+  var routes={
+    d1:[
+      {label:'공항 → 호텔',stops:['上海虹桥国际机场T1航站楼',HOTEL]},
+      {label:'그랜드마더 → 와이탄 → 난징동루 → 양꼬치 (도보)',mode:'walking',stops:['上海市黄浦区九江路399号','外滩 上海','上海市黄浦区南京东路340号','上海市黄浦区南京东路830号']}
+    ],
+    d2:[
+      {label:'포토위드 → 시시포스 → 슈슈통 → 사계민복',stops:[HOTEL,'上海市静安区陕西北路457号','上海市徐汇区陕西南路188弄','上海市静安区南京西路1225号','上海市静安区南京西路1168号']},
+      {label:'사계민복 → 말랑이 → 희희 → 우캉맨션',stops:['上海市静安区南京西路1168号','上海市静安区愚园路439弄','上海市静安区长乐路720号','武康大楼 上海']},
+      {label:'우캉맨션 → 관샤 → 안푸루 → Tagi (도보)',mode:'walking',stops:['武康大楼 上海','上海市徐汇区湖南路111号','上海市徐汇区安福路322号','上海市徐汇区乌鲁木齐中路263号']},
+      {label:'하이디라오 → Conde → 숙소',stops:['上海市黄浦区南京东路123号','上海市虹口区黄浦路60号',HOTEL]}
+    ],
+    d3:[
+      {label:'임시정부 → 점도덕 → 티엔즈팡 (도보)',mode:'walking',stops:['大韩民国临时政府旧址 上海','新天地 上海','上海市黄浦区黄陂南路838弄','田子坊 上海']},
+      {label:'제1백화점 → 마라롱샤 → 푸동',stops:['田子坊 上海','上海市黄浦区南京东路830号','上海市黄浦区西藏中路268号','上海市黄浦区金陵东路500号','东方明珠 上海']},
+      {label:'푸동 → 따룬파 → 숙소',stops:['东方明珠 上海','正大广场 上海','大润发 平型关店 上海',HOTEL]}
+    ],
+    d4:[
+      {label:'핫맥스 → 페이다추 → 와이탄 → 리바이셰 → 예원',stops:[HOTEL,'好特卖 陆家浜路 上海','上海市黄浦区西藏中路268号','上海市黄浦区中山东二路22号','豫园商城 上海']},
+      {label:'숙소 → 팡팡 모찌 → 홍차오 T1',stops:[HOTEL,'上海市徐汇区罗秀路897号','上海虹桥国际机场T1航站楼']}
+    ]
+  };
+  Object.keys(routes).forEach(function(day){
+    var row=document.querySelector('.gmap-row[data-day="'+day+'"]');
+    if(!row)return;
+    routes[day].forEach(function(r){
+      var st=r.stops;
+      var url='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(st[0])+'&destination='+encodeURIComponent(st[st.length-1]);
+      var mid=st.slice(1,-1).map(encodeURIComponent).join('|');
+      if(mid){url+='&waypoints='+mid;}
+      if(r.mode){url+='&travelmode='+r.mode;}
+      var a=document.createElement('a');
+      a.className='gmap-btn';a.href=url;a.target='_blank';a.rel='noopener';
+      a.textContent=r.label+' ↗';
+      row.appendChild(a);
+    });
+  });
+
+  // 고덕지도 검색어 복사
+  function fallbackCopy(text){
+    var ta=document.createElement('textarea');
+    ta.value=text;ta.setAttribute('readonly','');
+    ta.style.position='fixed';ta.style.top='0';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();
+    var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+    document.body.removeChild(ta);return ok;
+  }
+  function selectText(el){
+    try{var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}
+  }
+  document.querySelectorAll('.cp').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=btn.parentNode.querySelector('.srch-v');
+      var text=el?el.textContent.trim():'';
+      function done(){btn.textContent='복사됨';btn.classList.add('done');setTimeout(function(){btn.textContent='복사';btn.classList.remove('done');},1400);}
+      function fail(){if(fallbackCopy(text)){done();}else{selectText(el);btn.textContent='길게 눌러 복사';setTimeout(function(){btn.textContent='복사';},1800);}}
+      try{
+        if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fail);}
+        else{fail();}
+      }catch(e){fail();}
+    });
+  });
+
+  // 체크리스트 (이 브라우저에만 저장)
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem('sh-trip-final-checks')||'{}')||{};}catch(e){saved={};}
+  document.querySelectorAll('.check input[type=checkbox]').forEach(function(cb){
+    var id=cb.dataset.id;
+    if(saved[id]){cb.checked=true;cb.closest('.check').classList.add('checked');}
+    cb.addEventListener('change',function(){
+      cb.closest('.check').classList.toggle('checked',cb.checked);
+      saved[id]=cb.checked;
+      try{localStorage.setItem('sh-trip-final-checks',JSON.stringify(saved));}catch(e){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
